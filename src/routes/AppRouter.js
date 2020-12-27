@@ -5,6 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import AboutScreen from "../pages/AboutScreen";
 import HomeScreen from "../pages/HomeScreen";
 
 const AppRouter = () => {
@@ -28,7 +29,7 @@ const AppRouter = () => {
             <Switch>
               <Route exact path="/" component={HomeScreen}>
               </Route>
-              <Route path="/about">
+              <Route path="/about" component={AboutScreen}>
               </Route>
               <Route path="/dashboard">
               </Route>

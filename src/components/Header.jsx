@@ -1,10 +1,17 @@
 import React from 'react';
+import styled from '@emotion/styled';
+
+const Title=styled.h2`
+color:red;
+font-size:20px;
+text-align:center;
+`;
 
 const Header = () => {
     return ( 
-    <div>
+    <Title>
         Soy el header
-    </div> );
+    </Title> );
 }
  
 export default Header;
