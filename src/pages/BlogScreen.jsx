@@ -1,9 +1,10 @@
 import React from 'react';
+import ParallaxImagesContainer from '../components/Parallax';
 
 const BlogScreen = () => {
     return ( 
         <div>
-            <h1>Blog Screen</h1>
+            <ParallaxImagesContainer/>
         </div>
      );
 }
