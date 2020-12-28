@@ -70,6 +70,12 @@ header div #nave{
 
 $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
 
+.activado{
+  color:#080401 !important;//cambiar ESTOOOOOOOOOOOOOOO
+}
+.noactivado{
+  color: rgba(153, 153, 153, 0.425) !important;
+}
 
 .navbarcomponent{
       color: #323232;
@@ -83,7 +89,7 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
       // background-color: white;
       
         a{
-        color: rgba(153, 153, 153, 0.425) !important;//cambiar ESTOOOOOOOOOOOOOOO
+        // color: rgba(153, 153, 153, 0.425) !important;//cambiar ESTOOOOOOOOOOOOOOO
         font-weight: 400;
         letter-spacing: 0.8px;
         transition: all 300ms ease-in-out;
