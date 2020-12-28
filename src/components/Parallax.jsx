@@ -6,42 +6,43 @@ import PropTypes from "prop-types";
 import backgroundImage from "../assets/background.jpg";
 
 import textImage from "../assets/texto.png";
-import astronautImage from "../assets/astronaut.png";
-import planet1Image from "../assets/planet1.png";
-import planet2Image from "../assets/planet2.png";
-import rocketImage from "../assets/rocket.png";
+// import astronautImage from "../assets/astronaut.png";
+// import planet1Image from "../assets/planet1.png";
+// import planet2Image from "../assets/planet2.png";
+// import rocketImage from "../assets/rocket.png";
 
 const layers = [
   {
     name: "text",
     image: textImage,
-    dataDepth: "0.1"
+    dataDepth: "0.3",
+    height:"500px"
   },
-  {
-    name: "astronaut",
-    image: astronautImage,
-    dataDepth: "2"
-  },
-  {
-    name: "planet1",
-    image: planet1Image,
-    dataDepth: "1"
-  },
-  {
-    name: "planet2",
-    image: planet2Image,
-    dataDepth: "-1"
-  },
-  {
-    name: "rocket",
-    image: rocketImage,
-    dataDepth: "0.5"
-  }
+//   {
+//     name: "astronaut",
+//     image: astronautImage,
+//     dataDepth: "2"
+//   },
+//   {
+//     name: "planet1",
+//     image: planet1Image,
+//     dataDepth: "1"
+//   },
+//   {
+//     name: "planet2",
+//     image: planet2Image,
+//     dataDepth: "-1"
+//   },
+//   {
+//     name: "rocket",
+//     image: rocketImage,
+//     dataDepth: "0.5"
+//   }
 ];
 
 const Container = styled.div`
 	width: 100%;
-	height: 100vh;
+	height: calc(100vh - 70px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,7 +59,10 @@ const ParallaxImagesContainer = ({ backgroundImage, layers }) => {
   });
 
   return (
-    <Container backgroundImage={backgroundImage}>
+    //  <Container backgroundImage={textImage}>
+
+     <Container >
+
       <div id="scene">
         {layers.map((l, index) => (
           <img
@@ -66,6 +70,7 @@ const ParallaxImagesContainer = ({ backgroundImage, layers }) => {
             data-depth={l.dataDepth}
             src={l.image}
             alt={l.name}
+            height={l.height}
           />
         ))}
       </div>
