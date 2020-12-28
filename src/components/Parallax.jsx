@@ -42,14 +42,22 @@ const layers = [
 
 const Container = styled.div`
 	width: 100%;
-	height: calc(100vh - 70px);
+	/* height: calc(100vh - 70px); */
   display: flex;
   justify-content: center;
   align-items: center;
-	overflow: hidden;
+	/* overflow: hidden; */
 	background: url(${props => props.backgroundImage});
   background-repeat: no-repeat;
   background-size: cover;
+  padding:0;
+  margin:0;
+
+  img{
+    @media(max-width:992px){
+      height:400px;
+    }
+  }
 `;
 
 const ParallaxImagesContainer = ({ backgroundImage, layers }) => {
@@ -84,7 +92,8 @@ ParallaxImagesContainer.propTypes = {
     PropTypes.shape({
       name: PropTypes.string,
       image: PropTypes.string,
-      dataDepth: PropTypes.string
+      dataDepth: PropTypes.string,
+      height:PropTypes.string
     })
   )
 };
