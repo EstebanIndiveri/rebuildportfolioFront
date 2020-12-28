@@ -1,15 +1,15 @@
 import { Fragment } from "react";
-import Layout from "./components/Layout/Layout";
 import AppRouter from "./routes/AppRouter";
-
-
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
+import './App.scss';
 function App() {
   return (
     <Fragment>
-      <Layout>
-        {/* <HomeScreen/> */}
+      <Router>
         <AppRouter/>
-      </Layout>
+      </Router>
     </Fragment>
   );
 }
