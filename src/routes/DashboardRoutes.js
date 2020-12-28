@@ -4,7 +4,7 @@ import Navbar from '../components/NavBar';
 import AboutScreen from '../pages/AboutScreen';
 import BlogScreen from '../pages/BlogScreen';
 import ContactScreen from '../pages/ContactScreen';
-import HomeScreen from '../pages/HomeScreen';
+import HomeScreen from '../pages/HomeScreen/HomeScreen';
 import PortfolioScreen from '../pages/PortfolioScreen';
 const DashboardRoutes = () => {
     return (

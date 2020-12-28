@@ -2,9 +2,20 @@
     font-family: "bebas";
     src: url("./utils/Fonts/bebas/BEBAS.ttf");
   }
-
-*{
+  *{
     font-family: 'Roboto';
+}
+  *,  *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+body{
+  padding: 0;
+  margin:0;
+  box-sizing: inherit;
 }
 h1,h2,h3,h4,h5,h6{
   font-family: "bebas";
