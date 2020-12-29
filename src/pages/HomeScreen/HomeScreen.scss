@@ -12,3 +12,14 @@ body{
     margin-top:0;
     padding-top:0;
 }
+
+.self-typed{
+    font-size: 31px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color:black;
+    text-align: center !important;
+    span{
+        font-family: "bebas";
+    }
+}

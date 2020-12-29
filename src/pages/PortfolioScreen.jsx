@@ -23,12 +23,13 @@ const Title=styled.img`
     margin:0 auto;
     margin-top:-13rem;
     height:80%;
-    width:70%;
+    width:60%;
     @media(min-width:1280px){
         margin-top:-14rem;
     }
     @media (max-width:1430px){
-        margin-top:-10rem;
+        margin-top:-8rem;
+        margin-bottom:5rem;
     }
     @media(max-width:990px){
         margin-top:-5rem;
@@ -45,14 +46,37 @@ const Title=styled.img`
 `;
 
 const PortfolioScreen = () => {
+
+    const scroll = (component) => {
+        if(component){
+            const section = document.querySelector( component );
+            if(section){
+                section.scrollIntoView( { behavior: 'smooth' } );
+
+
+                const ready=document.querySelector(component);
+                ready.classList.add('animate__fadeIn','animate__slower');
+
+                setTimeout(() => {
+                    ready.classList.remove( 'animate__fadeIn','animate__slower')
+                }, 3000);
+            }
+        };
+      };
+
+
     return ( 
         <div className="animate__animated animate__fadeIn ">
-            <Background>
+            <Background className="animate__animated animate__fadeIn">
                 <TitleContainer>
                     <Title alt="" src={Titles}/>
                 </TitleContainer>
-            <p className="text-center portfolioSubTitle animate__animated animate__fadeIn animate__delay-1s">these are some of my projects</p>
-            </Background>
+                <p className="text-center portfolioSubTitle animate__animated animate__fadeIn animate__delay-1s">these are some of my projects</p>
+                <section id="section10" className="demo fade-in-slowx2">
+                    <div onClick={()=>scroll('#projects')}><span></span>Scroll</div>
+                </section>
+                <div id="projects" className="projectscontainer animate__animated fade-in-slow"></div>
+                </Background>
         </div>
      );
 }
