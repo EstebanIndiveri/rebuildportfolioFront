@@ -68,7 +68,7 @@ const Navbar = () => {
   const toggle = () => setIsOpen(!isOpen);
     return (
         <Fragment>
-               <Navi id="nave" className="navbarcomponent responsive1" color="light" light expand="md">
+               <Navi id="nave" className={window.location.pathname==="/portfolio"?"navbarcomponent responsive1 vintage fade-in":"navbarcomponent responsive1"} color="light" light expand="md">
                     <Link 
                         className="navbar-brand port-navbar-brand logo" 
                         to="/"

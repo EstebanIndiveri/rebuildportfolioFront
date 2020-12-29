@@ -17,6 +17,9 @@
     // left: -150px;
     // margin-left: 10px;
   }
+  @media(min-width:1400px){
+    left: -250px;
+  }
   &__arrow {
     display: inline-flex;
 

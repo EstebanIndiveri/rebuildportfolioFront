@@ -4,7 +4,7 @@ import Parallax from "parallax-js";
 import PropTypes from "prop-types";
 
 import backgroundImage from "../assets/background.jpg";
-
+import dev from '../assets/devorange.png';
 import textImage from "../assets/texto.png";
 // import astronautImage from "../assets/astronaut.png";
 // import planet1Image from "../assets/planet1.png";
@@ -18,11 +18,12 @@ const layers = [
     dataDepth: "0.3",
     height:"500px"
   },
-//   {
-//     name: "astronaut",
-//     image: astronautImage,
-//     dataDepth: "2"
-//   },
+  {
+    name: "astronaut",
+    image: dev,
+    dataDepth: "0.6",
+    height:"50px"
+  },
 //   {
 //     name: "planet1",
 //     image: planet1Image,
@@ -54,10 +55,35 @@ const Container = styled.div`
   margin:0;
 
   img{
-    @media(max-width:992px){
-      height:400px;
-    }
+    left: 92px !important;
+    top: -55px !important;
+    height: 600px;
+      @media(max-width:1100px){
+        height:500px;
+        left: 100px !important; 
+        top: 10px !important;
+      }
+      @media(max-width:910px){
+        height:450px;
+        left: 90px !important; 
+        top: 30px !important;
+      }
+      @media(max-width:850px){
+        height:400px;
+        left: 50px !important; 
+        top: 30px !important;
+      }
+      &:nth-child(2){
+        height:100px;
+        top:400px !important;
+        left:400px !important;
+      }
   }
+ 
+  @media(max-width:768px){
+        display:none;
+      }
+      
 `;
 
 const ParallaxImagesContainer = ({ backgroundImage, layers }) => {

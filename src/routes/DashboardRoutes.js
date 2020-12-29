@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch} from 'react-router-dom';
 import Navbar from '../components/NavBar';
 import AboutScreen from '../pages/AboutScreen';
 import BlogScreen from '../pages/BlogScreen';
@@ -11,10 +11,10 @@ const DashboardRoutes = () => {
         <Fragment>
             <Navbar/>
             <div>
-                <Switch>
+                <Switch >
                     <Route exact path='/about' component={AboutScreen}/>
                     <Route exact path='/home' component={HomeScreen}/>
-                    <Route exact path='/portfolio' component={PortfolioScreen}/>
+                    <Route exact path='/portfolio' component={PortfolioScreen} />
                     <Route exact path='/blog' component={BlogScreen}/>
                     <Route exact path='/contact' component={ContactScreen}/>
                     <Redirect to="/home"/>
