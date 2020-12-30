@@ -1,8 +1,8 @@
-import React from 'react'
+import React,{useState,useEffect,useRef} from 'react'
 import './Portfolioscreen.scss';
 import bk from '../assets/bk.png'
 import styled from '@emotion/styled';
-import Titles from '../assets/projects.png'
+import Titles from '../assets/projectorange.png'
 const Background=styled.div`
 background-image:url(${bk});
 min-height:122vh;
@@ -40,6 +40,26 @@ const Title=styled.img`
 `;
 
 const PortfolioScreen = () => {
+    const prevScrollY = useRef(0);
+    const [goingUp, setGoingUp] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+          const currentScrollY = window.scrollY;
+          if (prevScrollY.current < currentScrollY && goingUp) {
+            setGoingUp(false);
+          }
+          if (prevScrollY.current > currentScrollY && !goingUp) {
+            setGoingUp(true);
+          }
+          prevScrollY.current = currentScrollY;
+          console.log(goingUp, currentScrollY);
+        };
+    
+        window.addEventListener("scroll", handleScroll, { passive: true });
+    
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, [goingUp]);
 
     const scroll = (component) => {
         if(component){
@@ -63,14 +83,14 @@ const PortfolioScreen = () => {
         <div className="animate__animated animate__fadeIn ">
             <Background className="animate__animated animate__fadeIn">
                 <TitleContainer>
-                    <Title alt="" src={Titles} className="animate__animated animate__slideInDown"/>
+                    <Title alt="" src={Titles} className="animate__animated animate__slideInRight "/>
                 </TitleContainer>
                 <p className="text-center portfolioSubTitle animate__animated animate__fadeIn animate__delay-1s">these are some of my projects</p>
                 <section id="section10" className="demo fade-in-slowx2">
                     <div onClick={()=>scroll('#projects')}><span></span>Scroll</div>
                 </section>
                 </Background>
-                <div id="projects" className="projectscontainer animate__animated fade-in-slow"></div>
+                <div id="projects" className="projectscontainer animate__animated "></div>
 
         </div>
      );
