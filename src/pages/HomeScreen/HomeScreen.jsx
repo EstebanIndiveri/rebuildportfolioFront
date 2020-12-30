@@ -8,7 +8,7 @@ import styled from '@emotion/styled';
 import './HomeScreen.scss';
 import ParallaxImage from '../../components/Parallax'
 import ButttonRetro from '../../utils/Fonts/buttons/ButtonRetro';
-
+import elipse from '../../assets/redondat.png'
 const Containerwave=styled.div`
 width:100%;
 height:2.4rem;
@@ -68,8 +68,9 @@ const [ventana, setVentana] = useState(false);
                     <DescriptionHome/>
                     <ContainerButton className="text-center animate__animated animate__fadeIn animate__delay-3s">
                     <ButttonRetro/>
-
                     </ContainerButton>
+                    <img className="fade-in-slowx2" src={elipse} alt=""></img>
+
                     </div>
                 </Col>
                 <Col className="fade-in" xs="12" md="7" >

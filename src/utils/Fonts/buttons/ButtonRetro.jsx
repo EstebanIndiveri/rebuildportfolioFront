@@ -9,26 +9,26 @@ const ButttonRetro = () => {
 
 <section id="intro">
 
-  <div id="intro-content" class="center-content">
+  <div id="intro-content" className="center-content">
 
-    <div class="center-content-inner">
+    <div className="center-content-inner">
 
-      <div class="content-section content-section-margin">
+      <div className="content-section content-section-margin">
 
-        <div class="content-section-grid clearfix">
+        <div className="content-section-grid clearfix">
         
-        <a href="/#" class="button nav-link">
+        <a href="/#" className="button nav-link">
 
-          <div class="bottom"></div>
+          <div className="bottom"></div>
 
-          <div class="top">
+          <div className="top">
 
-          <div class="label pl-2 pr-2">Start</div>
+          <div className="label pl-2 pr-2">Start</div>
             
-        		<div class="button-border button-border-left"></div>
-        	  <div class="button-border button-border-top"></div>
-        	  <div class="button-border button-border-right"></div>
-        		<div class="button-border button-border-bottom"></div>
+        		<div className="button-border button-border-left"></div>
+        	  <div className="button-border button-border-top"></div>
+        	  <div className="button-border button-border-right"></div>
+        		<div className="button-border button-border-bottom"></div>
 
           </div>
 

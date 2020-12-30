@@ -1,5 +1,14 @@
 import React from 'react'
 import Typed from 'react-typed';
+import styled from '@emotion/styled';
+import SocialLinks from './SocialLinks';
+
+const P=styled.p`
+/* text-align:center; */
+text-align:justify;
+width:70%;
+margin:0 auto;
+`
 
 const DescriptionHome = () => {
     const roles=['Developer','Full Stack Engineer','UX/UI Designer'];
@@ -20,8 +29,13 @@ const DescriptionHome = () => {
             cursorChar="|"
           />
           </div>
-            <p className="mt-4 text-center text-center text-lowercase  animate__animated animate__fadeIn animate__delay-2s" >WELCOME TO THE PORTFOLIO WEBSITE OF ESTEBAN INDIVERI.
-                GET INFORMED, COLLABORATE AND DISCOVER PROJECTS I WAS WORKING ON THIS YEAR</p>
+            <P className="mt-4 animate__animated animate__fadeIn animate__delay-2s" >
+              Hello and welcome to the portfolio website of Esteban Daniel Indiveri.
+                Get informed, collaborate and discover projects i was working on this year</P>
+            <p className="text-center mt-3 animate__animated animate__fadeIn animate__delay-2s">Come'on, let's take a look on my work.</p>
+            <div>
+              <SocialLinks size={24} classname="animate__animated animate__fadeIn animate__delay-3s"/>
+            </div>
         </div>
      );
 }

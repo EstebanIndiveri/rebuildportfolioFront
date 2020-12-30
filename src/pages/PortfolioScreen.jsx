@@ -6,15 +6,9 @@ import Titles from '../assets/projects.png'
 const Background=styled.div`
 background-image:url(${bk});
 min-height:122vh;
-/* background-repeat:repeat-y; */
-/* background-size:cover; */
-/* z-index:-9999999; */
-/* position:relative; */
-/* display:block; */
-/* margin-bottom: -40rem; */
+
 `;
 const TitleContainer=styled.div`
-/* height:100px; */
     margin-bottom:-8rem;
 `;
 
@@ -69,14 +63,15 @@ const PortfolioScreen = () => {
         <div className="animate__animated animate__fadeIn ">
             <Background className="animate__animated animate__fadeIn">
                 <TitleContainer>
-                    <Title alt="" src={Titles}/>
+                    <Title alt="" src={Titles} className="animate__animated animate__slideInDown"/>
                 </TitleContainer>
                 <p className="text-center portfolioSubTitle animate__animated animate__fadeIn animate__delay-1s">these are some of my projects</p>
                 <section id="section10" className="demo fade-in-slowx2">
                     <div onClick={()=>scroll('#projects')}><span></span>Scroll</div>
                 </section>
-                <div id="projects" className="projectscontainer animate__animated fade-in-slow"></div>
                 </Background>
+                <div id="projects" className="projectscontainer animate__animated fade-in-slow"></div>
+
         </div>
      );
 }
