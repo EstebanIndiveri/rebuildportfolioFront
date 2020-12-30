@@ -4,7 +4,7 @@ import bk from '../assets/bk.png'
 import styled from '@emotion/styled';
 import Titles from '../assets/projectorange.png'
 const Background=styled.div`
-background-image:url(${bk});
+/* background-image:url(${bk}); */
 min-height:122vh;
 
 `;

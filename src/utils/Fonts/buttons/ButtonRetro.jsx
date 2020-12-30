@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-
+// import { scroll } from '../scroll';
+// import {scroll} from '../../../index';
 import './ButtonRetro.scss';
-
 
 const ButttonRetro = () => {
     return ( 
@@ -17,7 +17,7 @@ const ButttonRetro = () => {
 
         <div className="content-section-grid clearfix">
         
-        <a href="/#" className="button nav-link">
+        <div  className="button nav-link">
 
           <div className="bottom"></div>
 
@@ -32,7 +32,7 @@ const ButttonRetro = () => {
 
           </div>
 
-        	</a>
+        	</div>
 
         </div>
 

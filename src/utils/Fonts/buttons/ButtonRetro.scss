@@ -5,9 +5,11 @@
     text-decoration: none;
     position: relative;
     margin-top: 40px;
+    cursor: pointer;
 }
 
 .button .bottom {
+    cursor: pointer;
     position: absolute;
     left: 27px;
     top: 17px;
@@ -58,10 +60,14 @@
     left: 0;
     top: 0;
     background-color: transparent;
+    cursor: pointer;
+
 }
 
 .button:hover .top .label {
     color: #8BC9DC;
+    cursor: pointer;
+
 }
 
 .button-border {

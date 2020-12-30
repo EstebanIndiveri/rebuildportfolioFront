@@ -9,6 +9,8 @@ import './HomeScreen.scss';
 import ParallaxImage from '../../components/Parallax'
 import ButttonRetro from '../../utils/Fonts/buttons/ButtonRetro';
 import elipse from '../../assets/redondat.png'
+import ExpandHome from '../../components/ExpandHome';
+// import ListSkills from '../../components/ListSkills/ListSkills';
 const Containerwave=styled.div`
 width:100%;
 height:2.4rem;
@@ -36,6 +38,32 @@ width:200px;
     margin:0 auto;
 }
 `;
+const ImgContainer=styled.div`
+z-index:-999;
+ @media(max-width:786px){
+     display:none;
+ }
+`;
+const Img=styled.img`
+    z-index: -999999;
+    position: absolute;
+`;
+const scroll = (component) => {
+    if(component){
+        const section = document.querySelector( component );
+        if(section){
+            section.scrollIntoView( { behavior: 'smooth' } );
+
+
+            const ready=document.querySelector(component);
+            ready.classList.add('animate__fadeIn','animate__slower');
+
+            setTimeout(() => {
+                ready.classList.remove( 'animate__fadeIn','animate__slower')
+            }, 3000);
+        }
+    };
+  };
 
 const HomeScreen = () => {
 const [ventana, setVentana] = useState(false);
@@ -66,22 +94,25 @@ const [ventana, setVentana] = useState(false);
                     `}>
                     <ArrowRight />
                     <DescriptionHome/>
-                    <ContainerButton className="text-center animate__animated animate__fadeIn animate__delay-3s">
+                    <ContainerButton className="text-center animate__animated animate__fadeIn animate__delay-3s" onClick={()=>scroll(".listItem")}>
                     <ButttonRetro/>
                     </ContainerButton>
-                    <img className="fade-in-slowx2" src={elipse} alt=""></img>
-
+                    <ImgContainer>
+                    <Img className="fade-in-slowx2" src={elipse} alt=""></Img>
+                    </ImgContainer>
                     </div>
                 </Col>
                 <Col className="fade-in" xs="12" md="7" >
                         <ParallaxImage/>
                 </Col>
-         
             </Row>
             </Container>
-            
+            <ExpandHome/>
+            {/* <ListSkills/> */}
         </Fragment>
      );
 }
  
 export default HomeScreen;
+
+
