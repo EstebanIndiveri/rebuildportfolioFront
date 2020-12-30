@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Flipper, Flipped } from "react-flip-toolkit";
-
 import './ListSkills.scss';
 
 const listData = [...Array(7).keys()];
@@ -25,7 +24,8 @@ const shouldFlip = index => (prev, current) =>
                 shouldFlip={shouldFlip(index)}
                 delayUntil={createCardFlipId(index)}
               >
-                <div className="avatar" />
+                <div className="avatar"/>
+                    
               </Flipped>
               <div className="description">
                 {listData.slice(0, 3).map(i => (
