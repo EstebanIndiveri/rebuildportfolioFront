@@ -1,3 +1,4 @@
+
 .staggered-list-content {
     // width: 400px;
     width: 100%;
@@ -91,9 +92,15 @@
   }
   
   .additional-content > div {
+    text-align: center;
+    font-size: 17px;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
     opacity: 0;
-    border-radius: 3px;
-    background-color: gray;
+    border-radius: 2px;
+    background-color: #FFF;
+    box-shadow: 5px 5px 1px 2px #a1a1a1;
+    // border: 1px solid gray;
     height: 5rem;
   }
   

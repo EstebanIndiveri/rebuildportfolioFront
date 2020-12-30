@@ -1,4 +1,4 @@
-import React, {  useState } from 'react'
+import React, {  Fragment, useState } from 'react'
 import { Flipper, Flipped } from "react-flip-toolkit";
 import './ListSkills.scss';
 import react from '../../assets/react-logo.png'
@@ -12,7 +12,8 @@ const colors = ["#fafeff", "#FAFEFF", "#F8FEFF"];
 // FAFEFF
 // F8FEFF
 const data = ["Web Design - FullStack Developer", "MobileDeveloper", "Webapp Developer"];
-const subdata=["","Web app","Mobile Developer"]
+const subdata=["Web Developer with the most recent frameworks from javascript, css and sasss with React Angular, VueJs","Web app","Mobile Developer"]
+
 // eslint-disable-next-line
 const imgs=[react,angular]
 const shouldFlip = index => (prev, current) =>
@@ -20,7 +21,7 @@ const shouldFlip = index => (prev, current) =>
 
 
   const ListItem = ({ index, onClick,color,data,subdata }) => {
-      console.log(index);
+    //   console.log(index);
     return (
       <Flipped
         flipId={createCardFlipId(index)}
@@ -104,12 +105,39 @@ const ExpandedListItem = ({ index, onClick,color,data,subdata }) => {
                 ))}
               </div>
               <div className="additional-content mt-5">
-                {listData.slice(0, 3).map(i => (
+                  {index===0?(
+                      <Fragment>
+                    <div>{index===0&&subdata[0]}</div>
+                  <div>{index===0&&subdata[1]}</div>
+                  </Fragment>):null
+                  }
+                  
+
+              {/* {listData.slice(0, 3).map(i => {
+                //   console.log(listData);
+                  
+                //   return(
                 //   <div />
-                  <div>{color}</div>
+                //   );
+                subdata.forEach((datos,index)=>{
+                    console.log(datos)
+                    return(
+                     <div style={{background:"red"}}>{datos}</div>
+                    )
+                })
+              })} */}
+                {/* {subdata.forEach((element,inde) => (
+                //   <div />
+                  <div>{element[inde]}</div>
 
                 //   Creo los adicionales grises gordos
-                ))}
+                ))} */}
+                {/* {subdata.forEach((datos,index)=>{
+                    console.log(index)
+                    return(
+                     <div>{index}</div>
+                    )
+                })} */}
               </div>
             </div>
           </Flipped>
@@ -144,7 +172,8 @@ const ListSkills = () => {
                     onClick={handleClick}
                     color={colors[focused % colors.length]}
                     data={data[focused % data.length]}
-                  subdata={subdata[focused%subdata.length]}
+                //   subdata={subdata[focused%subdata.length]}
+                  subdata={subdata}
 
                   />
                 ) : (
@@ -154,7 +183,8 @@ const ListSkills = () => {
                   onClick={handleClick} 
                   color={colors[index % colors.length]}
                   data={data[index % data.length]}
-                  subdata={subdata[index%subdata.length]}
+                //   subdata={subdata[index%subdata.length]}
+
                   />
                 )}
               </li>
