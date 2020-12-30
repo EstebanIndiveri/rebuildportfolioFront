@@ -19,8 +19,10 @@
   .listItem {
     width: 100%;
     cursor: pointer;
-    background-color: #d0d0d0;
+    // background-color: #d0d0d0;
     overflow: hidden;
+    border-radius: 10px;
+    // box-shadow: 2px 2px 30px 4px #323232;
   }
   .listItemContent {
     display: flex;
@@ -29,11 +31,18 @@
     padding: 1rem;
   }
   .avatar {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 100px;
-    background-color: grey;
-    margin-right: 2rem;
+    // width: 4rem;
+    // height: 4rem;
+    width: 148px;
+    height: 105px;
+    // border-radius: 100px;
+    // background-color: grey;
+    // margin-right: 2rem;
+  }
+  .avatar-angular{
+    width: 130px !important;
+    height: 109px;
+    margin-right: 1rem;
   }
   .avatarExpanded {
     width: 8rem;
@@ -42,8 +51,10 @@
     margin-bottom: 1rem;
   }
   .description > div {
-    background-color: grey;
-    width: 14rem;
+    // background-color: grey;
+    // width: 14rem;
+    font-size: 18px;
+    font-weight: bold;
     border-radius: 6px;
     height: 0.5rem;
   }
@@ -63,7 +74,10 @@
   }
   .expandedListItem {
     cursor: pointer;
-    background-color: #d0d0d0;
+    // background-color: #d0d0d0;
+    border-radius: 10px;
+    // box-shadow: 2px 2px 30px 4px #323232;
+
   }
   .expandedListItemContent {
     padding: 2rem;

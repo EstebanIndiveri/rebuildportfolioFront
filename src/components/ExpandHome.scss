@@ -3,6 +3,22 @@
     max-width:100% !important;
     }
 }
-.vamos{
+#vamos{
     padding: 0 !important;
+}
+
+.paragraph{
+    // margin:0 auto;
+    p{
+        font-size: 18px;
+        text-align:center;
+    }
+}
+.expandTitle{
+    text-align: center;
+    font-size: 4rem;
+    color:#8bc9dc;
+    // b1dfec
+    text-shadow: #93b6c0 -4px 4px 10px, #65767a -6px 4px 2px;
+    
 }

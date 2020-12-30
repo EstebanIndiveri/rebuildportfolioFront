@@ -94,7 +94,7 @@ const [ventana, setVentana] = useState(false);
                     `}>
                     <ArrowRight />
                     <DescriptionHome/>
-                    <ContainerButton className="text-center animate__animated animate__fadeIn animate__delay-3s" onClick={()=>scroll(".listItem")}>
+                    <ContainerButton className="text-center animate__animated animate__fadeIn animate__delay-3s" onClick={()=>scroll(".expandHome")}>
                     <ButttonRetro/>
                     </ContainerButton>
                     <ImgContainer>
