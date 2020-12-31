@@ -2,16 +2,12 @@ import React, {  Fragment, useState } from 'react'
 import { Flipper, Flipped } from "react-flip-toolkit";
 import './ListSkills.scss';
 import react from '../../assets/react-logo.png'
-// import angular from '../../assets/angular.png'
 import flutter from '../../assets/flutter.png'
 import ux from '../../assets/unnamed.png'
 const listData = [...Array(3).keys()];
 const createCardFlipId = index => `listItem-${index}`;
 const colors = ["#fafeff", "#FAFEFF", "#F8FEFF"];
-// f4f9fa
-// f3f9fa
-// FAFEFF
-// F8FEFF
+
 const data = ["Web Design - FullStack Developer", "UX/UI designer", "MobileDeveloper"];
 const subdata=["Web Developer with the most recent frameworks from javascript, css and sass with React Angular, and VueJs","Sigle Page Application and Progressive Web App","User Experience and User Interface focus"];
 const uxui=["User Interface","Wireframes, Prototypes and Mockups","Animations and design in Figma, Adobe xd, Invision"];
@@ -23,7 +19,6 @@ const shouldFlip = index => (prev, current) =>
 
 
   const ListItem = ({ index, onClick,color,data,subdata }) => {
-    //   console.log(index);
     return (
       <Flipped
         flipId={createCardFlipId(index)}
@@ -48,15 +43,8 @@ const shouldFlip = index => (prev, current) =>
                   (<img className="flutter" src={flutter} alt=""/>):
                   null
                   }
-                  {/* (<img className="avatar-angular" src={angular} alt=""/> */}
-                  {/* {index===1?(<img className="avatar" src={angular} alt=""/>):null} */}
-                {/* <img className={index===0?"avatar":"avatar-angular"} src={index===0?react:angular} alt=""/> */}
-                
-                {/* los muestra a los avactares onclose */}
-                    
               </Flipped>
               <div className="description">
-                {/* {listData.slice(0, 3).map(i => ( */}
                 {listData.slice(0, 1).map(i => (
                   <Flipped
                     flipId={`description-${index}-${i}`}
@@ -65,9 +53,7 @@ const shouldFlip = index => (prev, current) =>
                     delayUntil={createCardFlipId(index)}
                   >
                     <div>{data}</div>
-                    {/* <div>{subdata}</div> */}
                     {/* CREA 3 divs con la clase description */}
-
                   </Flipped>
                 ))}
               </div>
@@ -97,8 +83,6 @@ const ExpandedListItem = ({ index, onClick,color,data,subdata,uxui }) => {
                 stagger="card-content"
                 delayUntil={createCardFlipId(index)}
               >
-                {/* <div className="avatar avatarExpanded" /> */}
-                {/* <img className={index===0?"avatar":"avatar-angular"} src={index===0?react:angular} alt=""/> */}
                 {index===0?
                   (<img className="avatar avatarExpanded" src={react} alt=""/>)
                   :index===1?
@@ -107,8 +91,6 @@ const ExpandedListItem = ({ index, onClick,color,data,subdata,uxui }) => {
                   (<img className="flutter flutterExpanded" src={flutter} alt=""/>):
                   null
                   }
-                {/* <img className="avatar" src={react} alt="" height="200px" width="200px"/> */}
-
                 {/* ACA crea los avatareas grieses redondos 3 */}
               </Flipped>
               <div className="description">
@@ -119,7 +101,6 @@ const ExpandedListItem = ({ index, onClick,color,data,subdata,uxui }) => {
                     delayUntil={createCardFlipId(index)}
                   >
                     <div>{data}</div>
-                    {/* <div /> */}
                     {/* CREA 3 divs con la clase description */}
                   </Flipped>
                 ))}
@@ -135,7 +116,6 @@ const ExpandedListItem = ({ index, onClick,color,data,subdata,uxui }) => {
                   :index===1?
                   (
                     <Fragment>
-
                     <div>{uxui[0]}</div>
                     <div>{uxui[1]}</div>
                     <div>{uxui[2]}</div>
@@ -143,42 +123,13 @@ const ExpandedListItem = ({ index, onClick,color,data,subdata,uxui }) => {
                     index===2?
                     (
                         <Fragment>
-
                         <div>{mobile[0]}</div>
                         <div>{mobile[1]}</div>
                         <div>{mobile[2]}</div>
                         </Fragment>
                     ):
                     null
-                  
                   }
-                  
-
-              {/* {listData.slice(0, 3).map(i => {
-                //   console.log(listData);
-                  
-                //   return(
-                //   <div />
-                //   );
-                subdata.forEach((datos,index)=>{
-                    console.log(datos)
-                    return(
-                     <div style={{background:"red"}}>{datos}</div>
-                    )
-                })
-              })} */}
-                {/* {subdata.forEach((element,inde) => (
-                //   <div />
-                  <div>{element[inde]}</div>
-
-                //   Creo los adicionales grises gordos
-                ))} */}
-                {/* {subdata.forEach((datos,index)=>{
-                    console.log(index)
-                    return(
-                     <div>{index}</div>
-                    )
-                })} */}
               </div>
             </div>
           </Flipped>
@@ -213,7 +164,6 @@ const ListSkills = () => {
                     onClick={handleClick}
                     color={colors[focused % colors.length]}
                     data={data[focused % data.length]}
-                //   subdata={subdata[focused%subdata.length]}
                   subdata={subdata}
                   uxui={uxui}
                   />
@@ -224,8 +174,6 @@ const ListSkills = () => {
                   onClick={handleClick} 
                   color={colors[index % colors.length]}
                   data={data[index % data.length]}
-                //   subdata={subdata[index%subdata.length]}
-
                   />
                 )}
               </li>
@@ -235,5 +183,4 @@ const ListSkills = () => {
       </Flipper>
      );
 }
- 
 export default ListSkills;
