@@ -40,16 +40,43 @@
     // background-color: grey;
     // margin-right: 2rem;
   }
-  .avatar-angular{
-    width: 130px !important;
-    height: 109px;
+  .flutter{
+      width: 130;
+      height: 70px;
     margin-right: 1rem;
+    margin-left: 2.5rem;
   }
+  .avatar-angular{
+    width: 80px ;
+    height: 70px;
+    margin-right: 1rem;
+    margin-left: 2.5rem;
+    opacity: .2;
+  }
+  
   .avatarExpanded {
-    width: 8rem;
-    height: 8rem;
+    // width: 8rem;
+    // height: 8rem;
     margin-right: 0;
+    width: 22rem;
+    height: 15rem;
     margin-bottom: 1rem;
+  }
+  .angularExpanded{
+    margin-right: 0;
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 1rem;
+    margin-left: 0rem;
+
+  }
+  .flutterExpanded{
+    margin-right: 0;
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 1rem;
+    margin-left: 0rem;
+
   }
   .description > div {
     // background-color: grey;
