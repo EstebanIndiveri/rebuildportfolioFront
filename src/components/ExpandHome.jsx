@@ -1,10 +1,14 @@
-import React, { Fragment } from 'react';
+import React, { Fragment,useState } from 'react';
 import { Col, Container,Row } from 'reactstrap';
 import ListSkills from './ListSkills/ListSkills';
-
+import wave from '../assets/wavetest.svg';
 import './ExpandHome.scss';
-
+import QuickSectionProducts from './QuickSectionProducts/QuickSectionProducts';
+import { Refresh } from './MotionAnime/Refresh';
+import { Example } from './MotionAnime/MotionAnime';
 const ExpandHome = () => {
+    const [count, setCount] = useState(0);
+
     return ( 
         <Fragment>
             <div className="clearfix">
@@ -28,7 +32,18 @@ const ExpandHome = () => {
                         </Col>
                     </Row>
                 </Container>
-            
+                <div className="clearfix m-5 d-flex">
+                    {/* <img src={wave} alt=""></img> */}
+                    <Refresh onClick={() => setCount(count + 1)} />
+                    <div className="example-container">
+                        <Example key={count} />
+                    </div>
+                <div className="text-center" style={{width:"100%"}}>
+                    <h1>Back</h1>
+                    <p>animations test</p>                
+                </div>
+            </div>
+                <QuickSectionProducts/>
         </Fragment>
      );
 }
