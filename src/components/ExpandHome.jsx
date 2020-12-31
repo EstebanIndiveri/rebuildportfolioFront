@@ -26,8 +26,6 @@ const ExpandHome = () => {
                         <Col md="12" xs="12" sm="12" lg="6" className="lista">
                             <ListSkills/>
                         </Col>
-                      
-
                     </Row>
                 </Container>
             

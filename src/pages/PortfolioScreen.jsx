@@ -53,7 +53,7 @@ const PortfolioScreen = () => {
             setGoingUp(true);
           }
           prevScrollY.current = currentScrollY;
-          console.log(goingUp, currentScrollY);
+          console.log(goingUp, currentScrollY,prevScrollY);
         };
     
         window.addEventListener("scroll", handleScroll, { passive: true });
@@ -90,7 +90,13 @@ const PortfolioScreen = () => {
                     <div onClick={()=>scroll('#projects')}><span></span>Scroll</div>
                 </section>
                 </Background>
-                <div id="projects" className="projectscontainer animate__animated "></div>
+                <div id="projects" className="projectscontainer animate__animated ">
+                    {!goingUp&&prevScrollY.current===738?
+                    (<div className="animate__animated animate__rotateIn"style={{background:"red",height:"100px",position:"fixed",bottom:'0', width: '100%'}}>estamos arriba de 338</div>)
+                    :
+                    (<div className="animate__animated animate__fadeOut" style={{background:"red",height:"100px",position:"fixed",bottom:'0', width: '100%'}}>estamos arriba de 338</div>)
+                    }
+                </div>
 
         </div>
      );
