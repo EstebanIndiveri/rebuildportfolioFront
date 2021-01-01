@@ -17,6 +17,5 @@ export const Example = () => {
         repeatDelay: 1
       }}
     />
-    
   );
 };

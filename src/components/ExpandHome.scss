@@ -23,3 +23,23 @@ border-radius: 15px;
     text-shadow: #93b6c0 -4px 4px 10px, #65767a -6px 4px 2px;
     
 }
+
+.invisible{
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+}
+.visible{
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
+.rotated{
+    transition: all 300ms ease-in-out;
+    opacity: .9;
+
+    transform: rotate(-90deg) scale(1);
+    &:hover{
+        transform: rotate(0deg) scale(2);
+      opacity: 1;
+    }
+
+}

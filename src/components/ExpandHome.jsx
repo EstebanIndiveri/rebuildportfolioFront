@@ -1,14 +1,22 @@
 import React, { Fragment,useState } from 'react';
 import { Col, Container,Row } from 'reactstrap';
 import ListSkills from './ListSkills/ListSkills';
-import wave from '../assets/wavetest.svg';
 import './ExpandHome.scss';
 import QuickSectionProducts from './QuickSectionProducts/QuickSectionProducts';
 import { Refresh } from './MotionAnime/Refresh';
 import { Example } from './MotionAnime/MotionAnime';
+// import ParallaxImage from './Parallax';
+// import ParallaxImagesContainer from './Parallax';
+import flutter from '../assets/90deg/flutter.png';
+import reactlogo from '../assets/90deg/react.png';
+import angularlogo from '../assets/90deg/angular.png';
+
+
+
 const ExpandHome = () => {
     const [count, setCount] = useState(0);
-
+    const[openList,setOpenList]=useState(false);
+    console.log(openList);
     return ( 
         <Fragment>
             <div className="clearfix">
@@ -28,21 +36,23 @@ const ExpandHome = () => {
                             </div>
                         </Col>
                         <Col md="12" xs="12" sm="12" lg="6" className="lista">
-                            <ListSkills/>
+                            <ListSkills openList={openList} setOpenList={setOpenList}/>
                         </Col>
                     </Row>
                 </Container>
-                <div className="clearfix m-5 d-flex">
-                    {/* <img src={wave} alt=""></img> */}
+                <div className={`clearfix m-5 d-flex ${openList? 'invisible':'visible'}`} >
                     <Refresh onClick={() => setCount(count + 1)} />
-                    <div className="example-container">
+                    <div className="example-container" style={{width:"100%",margin:"0 auto",display:'flex',textAlign:'center',justifyContent:'center'}}>
                         <Example key={count} />
                     </div>
-                <div className="text-center" style={{width:"100%"}}>
-                    <h1>Back</h1>
-                    <p>animations test</p>                
+                    <div className="text-center" style={{width:"100%",margin:"0 auto",display:"flex",justifyContent:"center"}}>
+                    <img className="rotated" src={reactlogo} alt="" height="120px" ></img>   
+                    <img className="rotated" src={flutter} alt="" height="120px" ></img> 
+                    <img className="rotated" src={angularlogo} alt="" height="120px" ></img>   
+
+                      
+                    </div>
                 </div>
-            </div>
                 <QuickSectionProducts/>
         </Fragment>
      );

@@ -137,11 +137,13 @@ const ExpandedListItem = ({ index, onClick,color,data,subdata,uxui }) => {
       </Flipped>
     );
   };
-const ListSkills = () => {
+const ListSkills = ({openList,setOpenList}) => {
     const [focused, setFocused] = useState(false);
     const handleClick=(index)=>{
         setFocused(focused===index?null:index);
+        setOpenList(!openList);
     }
+ 
     return ( 
         <Flipper
         flipKey={focused}
