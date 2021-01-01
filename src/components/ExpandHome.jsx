@@ -16,7 +16,9 @@ import angularlogo from '../assets/90deg/angular.png';
 const ExpandHome = () => {
     const [count, setCount] = useState(0);
     const[openList,setOpenList]=useState(false);
-    console.log(openList);
+    const[color,setColor]=useState('');
+    // console.log(color);
+    // console.log(openList);
     return ( 
         <Fragment>
             <div className="clearfix">
@@ -43,16 +45,24 @@ const ExpandHome = () => {
                 <div className={`clearfix m-5 d-flex ${openList? 'invisible':'visible'}`} >
                     <Refresh onClick={() => setCount(count + 1)} />
                     <div className="example-container" style={{width:"100%",margin:"0 auto",display:'flex',textAlign:'center',justifyContent:'center'}}>
-                        <Example key={count} />
+                        <Example key={count} color={color} setColor={setColor}/>
                     </div>
                     <div className="text-center" style={{width:"100%",margin:"0 auto",display:"flex",justifyContent:"center"}}>
-                    <img className="rotated" src={reactlogo} alt="" height="120px" ></img>   
-                    <img className="rotated" src={flutter} alt="" height="120px" ></img> 
-                    <img className="rotated" src={angularlogo} alt="" height="120px" ></img>   
-
-                      
+                    <img 
+                    onMouseEnter={() => setColor("#61DBFB")} 
+                    onMouseLeave={() => setColor("")} 
+                    className="rotated" src={reactlogo} alt="" height="120px" ></img>   
+                    <img  
+                    onMouseEnter={() => setColor("#01579b")} 
+                    onMouseLeave={() => setColor("#8bc9dc")} 
+                    className="rotated" src={flutter} alt="" height="120px" ></img> 
+                    <img 
+                    onMouseEnter={() => setColor("#B52E31")} 
+                    onMouseLeave={() => setColor("#8bc9dc")} 
+                    className="rotated" src={angularlogo} alt="" height="120px" ></img>   
                     </div>
                 </div>
+                #8bc9dc
                 <QuickSectionProducts/>
         </Fragment>
      );
