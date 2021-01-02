@@ -67,10 +67,10 @@ const ExpandHome = () => {
                     </div>
                 </div>
                 <ServicesOffered/>
+                <QuickSectionProducts/>
 
                 </Container>
 
-                <QuickSectionProducts/>
         </Fragment>
      );
 }
