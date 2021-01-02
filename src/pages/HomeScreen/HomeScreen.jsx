@@ -61,13 +61,19 @@ margin-right:20rem; */
 /* transform: rotate(90deg); */
 
 width: 265%;
-    height: 0rem;
+    /* height: 0rem;
     padding-top: 0px;
     margin-bottom: 0;
     margin-right: -64rem;
     margin-left: -59rem;
     padding-bottom: 0;
-    margin-top: 98rem;
+    margin-top: 98rem; */
+
+    position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+
     /* -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -119,10 +125,12 @@ const HomeScreen = () => {
             <Containerwave className="fade-in-slowx2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F3FEFF" fillOpacity="1" d="M0,192L48,197.3C96,203,192,213,288,218.7C384,224,480,224,576,234.7C672,245,768,267,864,240C960,213,1056,139,1152,122.7C1248,107,1344,149,1392,170.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
             </Containerwave>
-            <ContainerWave2 className="fade-in-slowx2">
-                {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4c6d70" fillOpacity="1" d="M0,192L48,197.3C96,203,192,213,288,218.7C384,224,480,224,576,234.7C672,245,768,267,864,240C960,213,1056,139,1152,122.7C1248,107,1344,149,1392,170.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg> */}
+            
+            {/* <ContainerWave2 className="fade-in-slowx2">
+                
                 <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F3FEFF" fill-opacity="1" d="M0,192L360,32L720,256L1080,0L1440,64L1440,320L1080,320L720,320L360,320L0,320Z" ></path></svg>
-            </ContainerWave2>
+            </ContainerWave2> */}
+
             <Container fluid={false}>
             <Row>
                 <Col xs="12" md="5">

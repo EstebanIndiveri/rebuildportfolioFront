@@ -13,6 +13,7 @@ import angularlogo from '../assets/90deg/angular.png';
 import angular from '../assets/angular.png';
 import flutterLog from '../assets/flutter.png'
 import reactLog from '../assets/react-logo.png'
+import ServicesOffered from './servicesOffered/ServicesOffered';
 
 
 const ExpandHome = () => {
@@ -44,9 +45,8 @@ const ExpandHome = () => {
                             <ListSkills openList={openList} setOpenList={setOpenList}/>
                         </Col>
                     </Row>
-                </Container>
-                <div className={`clearfix m-5 d-flex ${openList? 'invisible':'visible'}`} >
-                    <Refresh onClick={() => setCount(count + 1)} />
+                    <div className={`clearfix  d-flex ${openList? 'invisible':'visible'}`} >
+                    {/* <Refresh onClick={() => setCount(count + 1)} /> */}
                     <div className="example-container" style={{width:"100%",margin:"0 auto",display:'flex',textAlign:'center',justifyContent:'center'}}>
                         <Example key={count} color={color} setColor={setColor} logo={logo} setLogo={setLogo}/>
                     </div>
@@ -66,6 +66,10 @@ const ExpandHome = () => {
                     className="rotated" src={angularlogo} alt="" height="120px" ></img>   
                     </div>
                 </div>
+                <ServicesOffered/>
+
+                </Container>
+
                 <QuickSectionProducts/>
         </Fragment>
      );
