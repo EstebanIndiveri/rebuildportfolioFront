@@ -10,7 +10,9 @@ import { Example } from './MotionAnime/MotionAnime';
 import flutter from '../assets/90deg/flutter.png';
 import reactlogo from '../assets/90deg/react.png';
 import angularlogo from '../assets/90deg/angular.png';
-
+import angular from '../assets/angular.png';
+import flutterLog from '../assets/flutter.png'
+import reactLog from '../assets/react-logo.png'
 
 
 const ExpandHome = () => {
@@ -19,6 +21,7 @@ const ExpandHome = () => {
     const[color,setColor]=useState('');
     // console.log(color);
     // console.log(openList);
+    const [logo,setLogo]=useState(false);
     return ( 
         <Fragment>
             <div className="clearfix">
@@ -45,24 +48,24 @@ const ExpandHome = () => {
                 <div className={`clearfix m-5 d-flex ${openList? 'invisible':'visible'}`} >
                     <Refresh onClick={() => setCount(count + 1)} />
                     <div className="example-container" style={{width:"100%",margin:"0 auto",display:'flex',textAlign:'center',justifyContent:'center'}}>
-                        <Example key={count} color={color} setColor={setColor}/>
+                        <Example key={count} color={color} setColor={setColor} logo={logo} setLogo={setLogo}/>
                     </div>
                     <div className="text-center" style={{width:"100%",margin:"0 auto",display:"flex",justifyContent:"center"}}>
                     <img 
-                    onMouseEnter={() => setColor("#61DBFB")} 
-                    onMouseLeave={() => setColor("")} 
+                    onMouseEnter={() => {setColor("#e9f7fa");setLogo(reactLog)}} 
+                    onMouseLeave={() => {setColor("");setLogo(false)}} 
                     className="rotated" src={reactlogo} alt="" height="120px" ></img>   
                     <img  
-                    onMouseEnter={() => setColor("#01579b")} 
-                    onMouseLeave={() => setColor("#8bc9dc")} 
+                    onMouseEnter={() => {setColor("#fdfdfd");setLogo(flutterLog)}} 
+                    onMouseLeave={() => {setColor("");setLogo(false)}} 
                     className="rotated" src={flutter} alt="" height="120px" ></img> 
                     <img 
-                    onMouseEnter={() => setColor("#B52E31")} 
-                    onMouseLeave={() => setColor("#8bc9dc")} 
+                    onMouseEnter={() => {setColor("#B52E31");setLogo(angular)}} 
+                    onMouseLeave={() => {setColor("");setLogo(false)}} 
+                    
                     className="rotated" src={angularlogo} alt="" height="120px" ></img>   
                     </div>
                 </div>
-                #8bc9dc
                 <QuickSectionProducts/>
         </Fragment>
      );

@@ -52,7 +52,8 @@ const QuickSectionProducts = () => {
     
           <div class="productWrapper">
             <div class="image gatsby-image-wrapper">
-              <img src="https://i.ibb.co/BLGKHsw/Home-Regular-Ind-s.gif" alt="menu"/>
+              <img src="https://i.ibb.co/z58bqN9/Mercado-Pago-Certified-Developer-OP-esteban-indiveri-1-page-0001.jpg" alt="menu"/>
+              
               </div>
               <div class="text">
                 <div class="product-content">
@@ -68,3 +69,5 @@ const QuickSectionProducts = () => {
 }
  
 export default QuickSectionProducts;
+// https://i.ibb.co/BLGKHsw/Home-Regular-Ind-s.gif
+// https://i.ibb.co/z58bqN9/Mercado-Pago-Certified-Developer-OP-esteban-indiveri-1-page-0001.jpg
