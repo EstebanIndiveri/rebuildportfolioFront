@@ -3,7 +3,7 @@ import { Col, Container,Row } from 'reactstrap';
 import ListSkills from './ListSkills/ListSkills';
 import './ExpandHome.scss';
 import QuickSectionProducts from './QuickSectionProducts/QuickSectionProducts';
-import { Refresh } from './MotionAnime/Refresh';
+// import { Refresh } from './MotionAnime/Refresh';
 import { Example } from './MotionAnime/MotionAnime';
 // import ParallaxImage from './Parallax';
 // import ParallaxImagesContainer from './Parallax';
@@ -17,7 +17,7 @@ import ServicesOffered from './servicesOffered/ServicesOffered';
 
 
 const ExpandHome = () => {
-    const [count, setCount] = useState(0);
+    // const [count, setCount] = useState(0);
     const[openList,setOpenList]=useState(false);
     const[color,setColor]=useState('');
     // console.log(color);
@@ -48,7 +48,7 @@ const ExpandHome = () => {
                     <div className={`clearfix  d-flex ${openList? 'invisible':'visible'}`} >
                     {/* <Refresh onClick={() => setCount(count + 1)} /> */}
                     <div className="example-container" style={{width:"100%",margin:"0 auto",display:'flex',textAlign:'center',justifyContent:'center'}}>
-                        <Example key={count} color={color} setColor={setColor} logo={logo} setLogo={setLogo}/>
+                        <Example  color={color} setColor={setColor} logo={logo} setLogo={setLogo}/>
                     </div>
                     <div className="text-center" style={{width:"100%",margin:"0 auto",display:"flex",justifyContent:"center"}}>
                     <img 

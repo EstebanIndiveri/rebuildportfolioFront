@@ -10,6 +10,7 @@ import ParallaxImage from '../../components/Parallax'
 import ButttonRetro from '../../utils/Fonts/buttons/ButtonRetro';
 import elipse from '../../assets/redondat.png'
 import ExpandHome from '../../components/ExpandHome';
+import Footer from '../../components/Footer/Footer';
 // import ListSkills from '../../components/ListSkills/ListSkills';
 const Containerwave=styled.div`
 width:100%;
@@ -49,44 +50,23 @@ const Img=styled.img`
     position: absolute;
 `;
 
-const ContainerWave2=styled.div`
-/* width:200%; */
-/* height:1rem; */
-    /* margin-top:1.2rem; */
-/* padding-top:0;
-margin-bottom:0;
-margin-right:20rem; */
-    /* margin-left:5rem; */
-/* padding-bottom:0; */
-/* transform: rotate(90deg); */
+// const ContainerWave2=styled.div`
+// width: 265%;
+//     height: 0rem;
+//     padding-top: 0px;
+//     margin-bottom: 0;
+//     margin-right: -64rem;
+//     margin-left: -59rem;
+//     padding-bottom: 0;
+//     margin-top: 98rem;
+//     position: absolute;
+//     z-index: -9999999;
+//  @media(max-width:1100px){
+//    display:none;
+//  }
+// `;
 
-width: 265%;
-    /* height: 0rem;
-    padding-top: 0px;
-    margin-bottom: 0;
-    margin-right: -64rem;
-    margin-left: -59rem;
-    padding-bottom: 0;
-    margin-top: 98rem; */
 
-    position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-
-    /* -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(0deg); */
-    position: absolute;
-    z-index: -9999999;
- 
-
- @media(max-width:1100px){
-   display:none;
- }
-
-`;
 
 const scroll = (component) => {
     if(component){
@@ -105,7 +85,6 @@ const scroll = (component) => {
     };
   };
 
-
 const HomeScreen = () => {
 
 // const [ventana, setVentana] = useState(false);
@@ -121,11 +100,11 @@ const HomeScreen = () => {
     return ( 
         <Fragment>
             {/* <Background></Background> */}
+       
          
             <Containerwave className="fade-in-slowx2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F3FEFF" fillOpacity="1" d="M0,192L48,197.3C96,203,192,213,288,218.7C384,224,480,224,576,234.7C672,245,768,267,864,240C960,213,1056,139,1152,122.7C1248,107,1344,149,1392,170.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
             </Containerwave>
-            
             {/* <ContainerWave2 className="fade-in-slowx2">
                 
                 <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F3FEFF" fill-opacity="1" d="M0,192L360,32L720,256L1080,0L1440,64L1440,320L1080,320L720,320L360,320L0,320Z" ></path></svg>
@@ -158,6 +137,9 @@ const HomeScreen = () => {
             </Container>
             <ExpandHome/>
             {/* <ListSkills/> */}
+            <div onClick={()=>scroll("#nave")}>
+            <Footer/>
+            </div>
         </Fragment>
      );
 }

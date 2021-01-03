@@ -21,11 +21,15 @@
 .servicios{
     text-align: center;
     margin-top: 5rem;
+    
 }
 
 .servicios h2{
     font-size: 1.8rem;
     padding-bottom: .5rem;
+    transition: all .3s ease-in-out;
+
+    
 }
 
 .servicios h2::after{
@@ -61,8 +65,11 @@
     .servicio:hover{
         // box-shadow: 1px 1px 30px 1px #adadad; d3d3d3
         box-shadow: 1px 1px 12px 3px #dddddd;
-
         transform: scale(1.01);
         cursor: pointer;
+        h2{
+            color:#8b8b8b;
+            transition: all .3s ease-in-out;
+        }
     }
 }

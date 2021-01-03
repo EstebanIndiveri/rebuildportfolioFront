@@ -1,30 +1,37 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React, { Fragment } from 'react';
+// import styled from '@emotion/styled';
+import uptasker from '../../assets/backroads.png';
+import regularcoffe from '../../assets/coffe2.png';
+import tripnsleep from '../../assets/tripnsleep.png';
+import courseblog from '../../assets/courseblog.png';
+
+
+
 
 import './QuickSectionProducts.scss';
 
-const ContainerWave2=styled.div`
-position: absolute;
-width: 100%;
-    height: 0rem;
-    padding-top: 0px;
-    margin-bottom: 0;
-    margin-right: -64rem;
-    /* margin-left: -59rem; */
-    padding-bottom: 0;
-    margin-top: 30rem;
-  z-index: -9999999;
-  @media(max-width:1700px){
-    display:none;
-  }
-  `;
+// const ContainerWave2=styled.div`
+// position: absolute;
+// width: 100%;
+//     height: 0rem;
+//     padding-top: 0px;
+//     margin-bottom: 0;
+//     margin-right: -64rem;
+//     /* margin-left: -59rem; */
+//     padding-bottom: 0;
+//     margin-top: 30rem;
+//   z-index: -9999999;
+//   @media(max-width:1700px){
+//     display:none;
+//   }
+//   `;
 
 const QuickSectionProducts = () => {
     return ( 
-      <>
-      <ContainerWave2 className="fade-in-slowx2">
+      <Fragment>
+      {/* <ContainerWave2 className="fade-in-slowx2">
       <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F3FEFF" fill-opacity="1" d="M0,192L360,32L720,256L1080,0L1440,64L1440,320L1080,320L720,320L360,320L0,320Z" ></path></svg>
-  </ContainerWave2>
+  </ContainerWave2> */}
         <section class="sectionQuickProducts">
         
         <div class="titleProducts">
@@ -35,7 +42,9 @@ const QuickSectionProducts = () => {
         <div class="productList">
           <div class="productWrapper">
             <div class="image gatsby-image-wrapper">
-            <img src="https://i.ibb.co/64fzTV2/Home-Back-Roads-1.gif"  alt="menu"/>
+            {/* <img src="https://i.ibb.co/64fzTV2/Home-Back-Roads-1.gif"  alt="menu"/> */}
+            <img src={uptasker}  alt="menu"/>
+
             </div>
               <div class="text">
                 <div class="product-content">
@@ -48,7 +57,9 @@ const QuickSectionProducts = () => {
     
           <div class="productWrapper">
            <div class="image gatsby-image-wrapper">
-            <img src="https://i.ibb.co/qY3rDzK/Tripnsleep1.gif" alt="menu"/>
+            <img src={tripnsleep} alt="menu"/>
+            {/* <img src="https://i.ibb.co/qY3rDzK/Tripnsleep1.gif" alt="menu"/> */}
+
             </div>
               <div class="text">
                 <div class="product-content">
@@ -61,7 +72,8 @@ const QuickSectionProducts = () => {
     
           <div class="productWrapper">
             <div class="image gatsby-image-wrapper">
-              <img src="https://i.ibb.co/PD5NxDL/gifpersonal.gif" alt="menu"/>
+            <img src={courseblog} alt="menu"/>
+              {/* <img src="https://i.ibb.co/PD5NxDL/gifpersonal.gif" alt="menu"/> */}
               </div>
               <div class="text">
                 <div class="product-content">
@@ -74,7 +86,7 @@ const QuickSectionProducts = () => {
     
           <div class="productWrapper">
             <div class="image gatsby-image-wrapper">
-              <img src="https://i.ibb.co/z58bqN9/Mercado-Pago-Certified-Developer-OP-esteban-indiveri-1-page-0001.jpg" alt="menu"/>
+              <img src={regularcoffe} alt="menu"/>
               
               </div>
               <div class="text">
@@ -87,7 +99,7 @@ const QuickSectionProducts = () => {
           </div>
         </div>
       </section>
-      </>
+      </Fragment>
      );
 }
  
