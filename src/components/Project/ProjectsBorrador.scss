@@ -8,7 +8,7 @@ body{
     height: 100% !important;
   }
   
-  .container {
+  .containerList {
     max-width: 990px !important;
     flex: 1 1 100% !important;
     padding: 45px 25px !important;
@@ -16,7 +16,8 @@ body{
   
   .titlesCard {
     font-weight: bold !important;
-    color: rgb(95, 95, 95) !important;
+    // color: rgb(95, 95, 95) !important;
+    color: #f5b46b;
     margin: 6px 0 12px !important;
   }
   
@@ -71,9 +72,10 @@ body{
     &:hover{
       .card-content{
         box-shadow: 2px 2px 10px 2px #a0a0a0;
-
       }
-  
+      .card-image-container{
+        filter: brightness(100%);
+      }
      }
     
   }
@@ -136,6 +138,7 @@ body{
         min-height: 450px;
         min-width: 800px;
         max-width: 100%;
+
     }
   }
   
@@ -154,11 +157,17 @@ body{
     overflow: hidden !important;
     height: 420px !important;
     width: 100vw !important;
+    filter: brightness(80%) ;
+    transition: filter 300ms ease-in-out;
+
   }
   
   .open .card-image-container,
   .open .title-container {
     z-index: 1 !important;
+  }
+  .open .card-image-container{
+    filter: brightness(100%);
   }
   
   .title-container {
@@ -179,11 +188,18 @@ body{
   // }
   
   .category {
-    color: #fff !important;
-    font-size: 14px !important;
+    // color: #fff !important;
+    color: #8bc9dc;
+    font-size: 16px !important;
+    font-weight: bold;
     text-transform: uppercase !important;
   }
-  
+  .location{
+    color: #323232;
+    font-size: 16px !important;
+    font-weight: bold;
+    text-transform: uppercase !important;
+  }
   .overlay {
     z-index: 999 !important;
     position: fixed !important;

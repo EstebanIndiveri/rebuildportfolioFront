@@ -5,7 +5,7 @@ import image from '../../../assets/perfil-black.jpg'
 export const Header = () => (
   <header>
     <span className="date">{moment().format("DD-MM-YYYY")}</span>
-    <h1>Today</h1>
+    <h3>Today</h3>
     <div className="avatar">
       <img src={image} alt="" />
     </div>

@@ -38,7 +38,6 @@ const Store=({ match })=> {
     return (
       <>
             <AnimatePresence>
-
         <List selectedId={id} />
         
           {id && imageHasLoaded &&  <Item id={id} proyect={proyect} key="item" />}
@@ -63,9 +62,7 @@ const DashboardRoutes = () => {
 
                     <Route exact path='/projects/nuevo' component={NewProject} />
                     <Route exact path='/projects/editar/:id' component={EditProject} />
-
                     <Route exact path='/projects/show/:id' component={Store} />
-                    
                     <Route exact path='/blog' component={BlogScreen}/>
                     <Route exact path='/contact' component={ContactScreen}/>
                     <Redirect to="/home"/>

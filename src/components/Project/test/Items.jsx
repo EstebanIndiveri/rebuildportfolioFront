@@ -57,17 +57,18 @@ imagen&&
             className="title-container"
             layoutId={`title-container-${id}`}
           >
-            <span className="category">{description}</span><br/>
-            <span className="category">{location}</span>
+            <span className="category">{position}</span><br/>
+            <span className="location">{location}</span>
 
             <h2 className="titlesCard">{nombre}</h2>
           </motion.div>
           <motion.div className="content-container" animate>
-            <LoremIpsum
+            {/* <LoremIpsum
               p={2}
               avgWordsPerSentence={6}
               avgSentencesPerParagraph={4}
-            />
+            /> */}
+            {description}
           </motion.div>
         </motion.div>
       </div>

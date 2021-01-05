@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import '../ProjectsBorrador.scss';
 import clienteAxios from '../../../config/axios';
 import { Header } from './Header';
+import Spinner from '../../Spinner';
 
 
 
@@ -50,18 +51,26 @@ export function List({ selectedId }) {
         // llamo a la query
             consultarAPI();
     },[]);
+    if(!proyects.length)return <Spinner/>
+
   return (
       <Fragment>
-    <h2>Projects</h2>
+    {/* <h2>Projects</h2> */}
+    
+    <Header/>
     <Link to={'/projects/nuevo'}>
         Nuevo Proyecto
     </Link>
-    <Header/>
+    <div className="containerList" >
+
     <ul className="card-list">
       {proyects.map(card => (
         <Card key={card._id} card={card} isSelected={card._id === selectedId} />
       ))}
     </ul>
+      
+    </div>
+    
     </Fragment>
   );
 }

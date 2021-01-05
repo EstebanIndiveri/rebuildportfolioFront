@@ -11,6 +11,7 @@ const NewProject = (props) => {
         location:'',
         position:'',
         description:'',
+        url:''
     })
 
     // Archivo
@@ -26,6 +27,7 @@ const NewProject = (props) => {
         formData.append('location',project.location);
         formData.append('position',project.position);
         formData.append('description',project.description);
+        formData.append('url',project.url);
         formData.append('imagen',archivo);
 
         try {
@@ -89,6 +91,10 @@ const NewProject = (props) => {
             <div className="campo">
                 <label>Description:</label>
                 <input type="text" placeholder="Project Position" name="description" onChange={readInformationProyect}/>
+            </div>
+            <div className="campo">
+                <label>Url:</label>
+                <input type="text" placeholder="Project Position" name="url" onChange={readInformationProyect}/>
             </div>
            
             <div className="campo">
