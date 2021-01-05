@@ -95,7 +95,7 @@ const Navbar = () => {
                         </NavItem>
 
                         {/* <NavItem className="port-navbar-item">
-                            <Link to="/login" class="text-decoration-none">
+                            <Link to="/login" className="text-decoration-none">
                                 <ButtonSignIn outline color="warning">Sign In</ButtonSignIn>
                             </Link>
                         </NavItem>

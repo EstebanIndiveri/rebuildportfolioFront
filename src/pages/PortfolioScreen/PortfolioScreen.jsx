@@ -1,10 +1,22 @@
 import React,{useState,useEffect,useRef} from 'react'
 import './Portfolioscreen.scss';
-import bk from '../assets/bk.png'
+
 import styled from '@emotion/styled';
-import Titles from '../assets/projectorange.png'
+import Titles from '../../assets/projectorange.png'
+// import ProjectsList from '../../components/Projects/ProjectsList';
+
+// import Projects from '../../components/Project/Projects';
+
+import ProjectsBorrador from '../../components/Project/ProjectsBorrador';
+import ProjectBorrador from '../../components/Project/ProjectBorrador';
+
+
+// import Projects from '../../components/Projects/Projects';
+/* background-image:url(${bk});
+// import bk from '../../assets/bk.png'
+*/
+
 const Background=styled.div`
-/* background-image:url(${bk}); */
 min-height:122vh;
 
 `;
@@ -90,12 +102,18 @@ const PortfolioScreen = () => {
                     <div onClick={()=>scroll('#projects')}><span></span>Scroll</div>
                 </section>
                 </Background>
-                <div id="projects" className="projectscontainer animate__animated ">
+                {/* <div id="projects" className="projectscontainer animate__animated ">
                     {!goingUp&&prevScrollY.current===738?
                     (<div className="animate__animated animate__rotateIn"style={{background:"red",height:"100px",position:"fixed",bottom:'0', width: '100%'}}>estamos arriba de 338</div>)
                     :
                     (<div className="animate__animated animate__fadeOut" style={{background:"red",height:"100px",position:"fixed",bottom:'0', width: '100%'}}>estamos arriba de 338</div>)
                     }
+                </div> */}
+                <div>
+                    {/* <ProjectsList publisher='Marvel Comics'/> */}
+                    {/* <Projects/> */}
+                    {/* <ProjectsBorrador/> */}
+                    <ProjectBorrador/>
                 </div>
 
         </div>

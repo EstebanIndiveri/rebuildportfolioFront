@@ -1,19 +1,19 @@
 import React, { Fragment,useState } from 'react';
 import { Col, Container,Row } from 'reactstrap';
-import ListSkills from './ListSkills/ListSkills';
 import './ExpandHome.scss';
-import QuickSectionProducts from './QuickSectionProducts/QuickSectionProducts';
+import QuickSectionProducts from '../QuickSectionProducts/QuickSectionProducts';
 // import { Refresh } from './MotionAnime/Refresh';
-import { Example } from './MotionAnime/MotionAnime';
+import { Example } from '../MotionAnime/MotionAnime';
 // import ParallaxImage from './Parallax';
 // import ParallaxImagesContainer from './Parallax';
-import flutter from '../assets/90deg/flutter.png';
-import reactlogo from '../assets/90deg/react.png';
-import angularlogo from '../assets/90deg/angular.png';
-import angular from '../assets/angular.png';
-import flutterLog from '../assets/flutter.png'
-import reactLog from '../assets/react-logo.png'
-import ServicesOffered from './servicesOffered/ServicesOffered';
+import flutter from '../../assets/90deg/flutter.png';
+import reactlogo from '../../assets/90deg/react.png';
+import angularlogo from '../../assets/90deg/angular.png';
+import angular from '../../assets/angular.png';
+import flutterLog from '../../assets/flutter.png'
+import reactLog from '../../assets/react-logo.png'
+import ServicesOffered from '../servicesOffered/ServicesOffered';
+import ListSkills from '../ListSkills/ListSkills';
 
 
 const ExpandHome = () => {

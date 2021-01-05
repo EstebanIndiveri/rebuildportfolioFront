@@ -32,69 +32,69 @@ const QuickSectionProducts = () => {
       {/* <ContainerWave2 className="fade-in-slowx2">
       <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F3FEFF" fill-opacity="1" d="M0,192L360,32L720,256L1080,0L1440,64L1440,320L1080,320L720,320L360,320L0,320Z" ></path></svg>
   </ContainerWave2> */}
-        <section class="sectionQuickProducts">
+        <section className="sectionQuickProducts">
         
-        <div class="titleProducts">
-          <h3 class="message">Make with &nbsp; &nbsp;<i class="fas fa-heart"></i></h3>
-          <h1 class="title">Our Work</h1>
-          <div class="underline"></div>
+        <div className="titleProducts">
+          <h3 className="message">Make with &nbsp; &nbsp;<i className="fas fa-heart"></i></h3>
+          <h1 className="title">Our Work</h1>
+          <div className="underline"></div>
         </div>
-        <div class="productList">
-          <div class="productWrapper">
-            <div class="image gatsby-image-wrapper">
+        <div className="productList">
+          <div className="productWrapper">
+            <div className="image gatsby-image-wrapper">
             {/* <img src="https://i.ibb.co/64fzTV2/Home-Back-Roads-1.gif"  alt="menu"/> */}
             <img src={uptasker}  alt="menu"/>
 
             </div>
-              <div class="text">
-                <div class="product-content">
-                  <h3 class="name">BackRoads Blog</h3>
-                  <h3 class="price">Gatsby Js</h3>
+              <div className="text">
+                <div className="product-content">
+                  <h3 className="name">BackRoads Blog</h3>
+                  <h3 className="price">Gatsby Js</h3>
                 </div>
-                <p class="info">Blog travel Project created with React and Gatsby with Graphql</p>
+                <p className="info">Blog travel Project created with React and Gatsby with Graphql</p>
               </div>
           </div>
     
-          <div class="productWrapper">
-           <div class="image gatsby-image-wrapper">
+          <div className="productWrapper">
+           <div className="image gatsby-image-wrapper">
             <img src={tripnsleep} alt="menu"/>
             {/* <img src="https://i.ibb.co/qY3rDzK/Tripnsleep1.gif" alt="menu"/> */}
 
             </div>
-              <div class="text">
-                <div class="product-content">
-                  <h3 class="name">TravelApp</h3>
-                  <h3 class="price">Ionic</h3>
+              <div className="text">
+                <div className="product-content">
+                  <h3 className="name">TravelApp</h3>
+                  <h3 className="price">Ionic</h3>
                 </div>
-                <p class="info">Travelapp project created with Ionic Framework using google maps and paypal api</p>
+                <p className="info">Travelapp project created with Ionic Framework using google maps and paypal api</p>
               </div>
           </div>
     
-          <div class="productWrapper">
-            <div class="image gatsby-image-wrapper">
+          <div className="productWrapper">
+            <div className="image gatsby-image-wrapper">
             <img src={courseblog} alt="menu"/>
               {/* <img src="https://i.ibb.co/PD5NxDL/gifpersonal.gif" alt="menu"/> */}
               </div>
-              <div class="text">
-                <div class="product-content">
-                  <h3 class="name">Course Web</h3>
-                  <h3 class="price">React js</h3>
+              <div className="text">
+                <div className="product-content">
+                  <h3 className="name">Course Web</h3>
+                  <h3 className="price">React js</h3>
                 </div>
-                <p class="info">Course webapp created with React Sass and Mongodb</p>
+                <p className="info">Course webapp created with React Sass and Mongodb</p>
               </div>
           </div>
     
-          <div class="productWrapper">
-            <div class="image gatsby-image-wrapper">
+          <div className="productWrapper">
+            <div className="image gatsby-image-wrapper">
               <img src={regularcoffe} alt="menu"/>
               
               </div>
-              <div class="text">
-                <div class="product-content">
-                  <h3 class="name">Coffe page</h3>
-                  <h3 class="price">Gatsby JS</h3>
+              <div className="text">
+                <div className="product-content">
+                  <h3 className="name">Coffe page</h3>
+                  <h3 className="price">Gatsby JS</h3>
                 </div>
-                <p class="info">Coffe webpage created with Gatbsy js using paypal api</p>
+                <p className="info">Coffe webpage created with Gatbsy js using paypal api</p>
               </div>
           </div>
         </div>

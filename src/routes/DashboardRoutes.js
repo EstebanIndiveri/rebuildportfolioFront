@@ -1,11 +1,14 @@
 import React, { Fragment } from 'react';
 import { Redirect, Route, Switch} from 'react-router-dom';
-import Navbar from '../components/NavBar';
+import Navbar from '../components/NavBar/NavBar';
 import AboutScreen from '../pages/AboutScreen';
 import BlogScreen from '../pages/BlogScreen';
 import ContactScreen from '../pages/ContactScreen';
 import HomeScreen from '../pages/HomeScreen/HomeScreen';
-import PortfolioScreen from '../pages/PortfolioScreen';
+import PortfolioScreen from '../pages/PortfolioScreen/PortfolioScreen';
+import EditProject from '../components/Project/EditProject';
+import NewProject from '../components/Project/NewProject';
+
 const DashboardRoutes = () => {
     return (
         <Fragment>
@@ -15,6 +18,10 @@ const DashboardRoutes = () => {
                     <Route exact path='/about' component={AboutScreen}/>
                     <Route exact path='/home' component={HomeScreen}/>
                     <Route exact path='/portfolio' component={PortfolioScreen} />
+
+                    <Route exact path='/projects/nuevo' component={NewProject} />
+                    <Route exact path='/projects/editar/:id' component={EditProject} />
+
                     <Route exact path='/blog' component={BlogScreen}/>
                     <Route exact path='/contact' component={ContactScreen}/>
                     <Redirect to="/home"/>

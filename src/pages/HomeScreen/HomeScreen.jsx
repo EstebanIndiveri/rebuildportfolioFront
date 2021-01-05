@@ -9,7 +9,7 @@ import './HomeScreen.scss';
 import ParallaxImage from '../../components/Parallax'
 import ButttonRetro from '../../utils/Fonts/buttons/ButtonRetro';
 import elipse from '../../assets/redondat.png'
-import ExpandHome from '../../components/ExpandHome';
+import ExpandHome from '../../components/ExpandHome/ExpandHome';
 import Footer from '../../components/Footer/Footer';
 // import ListSkills from '../../components/ListSkills/ListSkills';
 const Containerwave=styled.div`
