@@ -8,7 +8,6 @@ import Titles from '../../assets/projectorange.png'
 // import Projects from '../../components/Project/Projects';
 
 import ProjectsBorrador from '../../components/Project/ProjectsBorrador';
-import ProjectBorrador from '../../components/Project/ProjectBorrador';
 
 
 // import Projects from '../../components/Projects/Projects';
@@ -112,8 +111,7 @@ const PortfolioScreen = () => {
                 <div>
                     {/* <ProjectsList publisher='Marvel Comics'/> */}
                     {/* <Projects/> */}
-                    {/* <ProjectsBorrador/> */}
-                    <ProjectBorrador/>
+                    <ProjectsBorrador/>
                 </div>
 
         </div>

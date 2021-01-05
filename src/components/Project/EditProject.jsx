@@ -31,6 +31,7 @@ const EditProject = (props) => {
             saveProject(productoConsulta.data);
         }
         consultarApi();
+        // eslint-disable-next-line
     },[])
 
     // editar el proyecto
