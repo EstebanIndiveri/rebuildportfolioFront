@@ -9,6 +9,8 @@ import Titles from '../../assets/projectorange.png'
 
 import ProjectsBorrador from '../../components/Project/ProjectsBorrador';
 
+import {List} from '../../components/Project/test/List';
+import { motion } from 'framer-motion';
 
 // import Projects from '../../components/Projects/Projects';
 /* background-image:url(${bk});
@@ -91,31 +93,58 @@ const PortfolioScreen = () => {
 
 
     return ( 
-        <div className="animate__animated animate__fadeIn ">
-            <Background className="animate__animated animate__fadeIn">
+      
+                // <div id="projects" style={{background:'black'}}>
+                    <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: 0.15 } }}
+            transition={{ duration: 1,}}>
+                <div style={{height:'120vh'}}>
                 <TitleContainer>
-                    <Title alt="" src={Titles} className="animate__animated animate__slideInRight "/>
-                </TitleContainer>
-                <p className="text-center portfolioSubTitle animate__animated animate__fadeIn animate__delay-1s">these are some of my projects</p>
-                <section id="section10" className="demo fade-in-slowx2">
-                    <div onClick={()=>scroll('#projects')}><span></span>Scroll</div>
-                </section>
-                </Background>
-                {/* <div id="projects" className="projectscontainer animate__animated ">
-                    {!goingUp&&prevScrollY.current===738?
-                    (<div className="animate__animated animate__rotateIn"style={{background:"red",height:"100px",position:"fixed",bottom:'0', width: '100%'}}>estamos arriba de 338</div>)
-                    :
-                    (<div className="animate__animated animate__fadeOut" style={{background:"red",height:"100px",position:"fixed",bottom:'0', width: '100%'}}>estamos arriba de 338</div>)
-                    }
-                </div> */}
-                <div>
-                    {/* <ProjectsList publisher='Marvel Comics'/> */}
-                    {/* <Projects/> */}
-                    <ProjectsBorrador/>
+                     <Title alt="" src={Titles} className="animate__animated animate__slideInRight "/>
+                 </TitleContainer>
+                 <p className="text-center portfolioSubTitle animate__animated animate__fadeIn animate__delay-1s">these are some of my projects</p>
+                 <section id="section10" className="demo fade-in-slowx2">
+                     <div onClick={()=>scroll('#projects')}><span></span>Scroll</div>
+                 </section>
                 </div>
+                 <motion.div id="projects"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: 0.15 } }}
+            transition={{ duration: 1.2}}>
+                    <List />
+                    </motion.div>
+                </motion.div>
+                // </div>
 
-        </div>
+        //</div>
      );
 }
  
 export default PortfolioScreen;
+
+  // <div className="animate__animated animate__fadeIn ">
+        //     <Background className="animate__animated animate__fadeIn">
+        //         <TitleContainer>
+        //             <Title alt="" src={Titles} className="animate__animated animate__slideInRight "/>
+        //         </TitleContainer>
+        //         <p className="text-center portfolioSubTitle animate__animated animate__fadeIn animate__delay-1s">these are some of my projects</p>
+        //         <section id="section10" className="demo fade-in-slowx2">
+        //             <div onClick={()=>scroll('#projects')}><span></span>Scroll</div>
+        //         </section>
+        //         </Background>
+
+                // {/* <div id="projects" className="projectscontainer animate__animated ">
+                //     {!goingUp&&prevScrollY.current===738?
+                //     (<div className="animate__animated animate__rotateIn"style={{background:"red",height:"100px",position:"fixed",bottom:'0', width: '100%'}}>estamos arriba de 338</div>)
+                //     :
+                //     (<div className="animate__animated animate__fadeOut" style={{background:"red",height:"100px",position:"fixed",bottom:'0', width: '100%'}}>estamos arriba de 338</div>)
+                //     }
+                // </div> */}
+                // {/* <div> */}
+                //     {/* <ProjectsList publisher='Marvel Comics'/> */}
+                //     {/* <Projects/> */}
+                //     {/* <ProjectsBorrador/> */}
+                // {/* </div> */}

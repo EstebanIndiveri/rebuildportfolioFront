@@ -7,9 +7,14 @@ import {
 import LoginScreen from "../pages/LoginScreen";
 import DashboardRoutes from "./DashboardRoutes";
 
+import { AnimateSharedLayout } from "framer-motion";
+
+
 const AppRouter = () => {
 
     return (
+      <AnimateSharedLayout type="crossfade">
+
         <Router>
           <div>
             <Switch>
@@ -18,6 +23,8 @@ const AppRouter = () => {
             </Switch>
           </div>
         </Router>
+        </AnimateSharedLayout>
+
       );
     }
  
