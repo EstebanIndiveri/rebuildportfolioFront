@@ -26,7 +26,7 @@ const ProjectsBorrador = () => {
     },[proyects]);
 
     // spínner de carga
-    if(!proyects.length)return <Spinner/>
+    // if(!proyects.length)return <Spinner/>
     return ( 
         <Fragment>
           

@@ -11,7 +11,7 @@ import Spinner from '../../Spinner';
 
 function Card({ card }) {
     const{nombre,position,location,imagen,description,_id}=card;
-
+  // console.log(nombre);
   return (
     <li className={`card `}>
       <div className="card-content-container">
@@ -51,7 +51,7 @@ export function List({ selectedId }) {
         // llamo a la query
             consultarAPI();
     },[]);
-    if(!proyects.length)return <Spinner/>
+    // if(!proyects.length)return <Spinner/>
 
   return (
       <Fragment>

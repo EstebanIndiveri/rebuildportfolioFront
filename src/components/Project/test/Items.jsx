@@ -1,4 +1,4 @@
-import React, {  Fragment } from 'react'
+import React, {  Fragment,useState,useEffect } from 'react'
 
 import { motion } from "framer-motion";
 import { LoremIpsum } from "react-lorem-ipsum";
@@ -9,16 +9,34 @@ import clienteAxios from '../../../config/axios';
 
 
 
-export function Item(props) {
+export function Item({id}) {
+  // const[proyect,saveProject]=useState({});
+  const[project,saveProject]=useState({});
+
+  // consutar api cuando cargue
+useEffect(()=>{
+  // api
+      const consultarApi=async()=>{
+          const productoConsulta=await clienteAxios.get(`/proyectos/${id}`);
+          console.log(productoConsulta.data);
+          saveProject(productoConsulta.data);
+          // console.log(project);
+      }
+      consultarApi();
+      // eslint-disable-next-line
+  },[])
+
+
   const history = useHistory();
-    const{proyect:{nombre,position,location,imagen,description,_id}}=props;
+    const{nombre,position,location,imagen,description,_id,url}=project;
 //   const { nombre,position,location,imagen,description,_id }=proyect;
-  let id=_id;
+  // let id=_id;
+  // let imagen=false;
 //   const { nombre,position,location,imagen,description };
-imagen&&
-    console.log(nombre,description,`http://localhost:5000/${imagen}`);
+// imagen&&
+//     console.log(nombre,description,`http://localhost:5000/${imagen}`);
 
-
+  
   return (  
        
     
@@ -26,14 +44,18 @@ imagen&&
            {imagen&&(
 
     <Fragment>
-           
+           {/* 
+            initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0, transition: { duration: 0.15 } }}
+        transition={{ duration: 0.2, delay: 0.15 }} */}
         
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0, transition: { duration: 0.15 } }}
         transition={{ duration: 0.2, delay: 0.15 }}
-        style={{ pointerEvents: "auto",overflowY:'scroll',position:'relative',background:'black' }}
+        style={{ pointerEvents: "auto" }}
         className="overlay"
         
       >
@@ -41,10 +63,11 @@ imagen&&
 
       </motion.div>
       <div  className="card-content-container open" >
-        <motion.div className="card-content" layoutId={`card-container-${id}`}>
+        <motion.div className="card-content" layoutId={`card-container-${_id}`}>
+          
           <motion.div
             className="card-image-container cursor-pointer"
-            layoutId={`card-image-container-${id}`}
+            layoutId={`card-image-container-${_id}`}
             onClick={()=>history.goBack()
             }
           >
@@ -68,6 +91,9 @@ imagen&&
               avgWordsPerSentence={6}
               avgSentencesPerParagraph={4}
             /> */}
+            {url&&(
+              <a href={url} target="_blank" alt="" rel="noreferrer">{url}</a>
+            )}
             {description}
           </motion.div>
         </motion.div>
