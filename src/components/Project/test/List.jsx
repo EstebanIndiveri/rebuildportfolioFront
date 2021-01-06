@@ -6,7 +6,16 @@ import '../ProjectsBorrador.scss';
 import clienteAxios from '../../../config/axios';
 import { Header } from './Header';
 // import Spinner from '../../Spinner';
+import styled from '@emotion/styled';
 
+const P=styled.p`
+text-align:center;
+font-size:2rem;
+color:#f5b46b;
+font-weight:bold;
+text-decoration:underline;
+text-transform:uppercase;
+`;
 
 
 function Card({ card }) {
@@ -69,7 +78,7 @@ export function List({ selectedId }) {
         <Card key={card._id} card={card} isSelected={card._id === selectedId} />
       ))}
     </ul>
-      
+      <P >And More</P>
     </div>
     
     </Fragment>

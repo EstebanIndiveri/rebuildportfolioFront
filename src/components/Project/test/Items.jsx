@@ -87,7 +87,7 @@ useEffect(()=>{
               avgSentencesPerParagraph={4}
             /> */}
             {url&&(<div className="text-center">
-              Link: <a href={url} target="_blank" alt="" rel="noreferrer">{url}</a>
+              Demo: <a href={url} target="_blank" alt="" rel="noreferrer">{url}</a>
               </div>
             )}<br/>
             <p className="textoContainer text-justify w-100">
