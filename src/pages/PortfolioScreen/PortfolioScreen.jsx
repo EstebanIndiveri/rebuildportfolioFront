@@ -1,26 +1,22 @@
-import React,{useState,useEffect,useRef} from 'react'
+import React,{useState,useEffect,useRef, Fragment} from 'react'
 import './Portfolioscreen.scss';
-
 import styled from '@emotion/styled';
 import Titles from '../../assets/projectorange.png'
 // import ProjectsList from '../../components/Projects/ProjectsList';
-
 // import Projects from '../../components/Project/Projects';
-
-import ProjectsBorrador from '../../components/Project/ProjectsBorrador';
-
+// import ProjectsBorrador from '../../components/Project/ProjectsBorrador';
 import {List} from '../../components/Project/test/List';
-import { motion } from 'framer-motion';
-
+import { AnimatePresence } from 'framer-motion';
+import clienteAxios from '../../config/axios';
+import { Item } from '../../components/Project/test/Items';
 // import Projects from '../../components/Projects/Projects';
 /* background-image:url(${bk});
 // import bk from '../../assets/bk.png'
 */
 
-const Background=styled.div`
-min-height:122vh;
-
-`;
+// const Background=styled.div`
+// min-height:122vh;
+// `;
 const TitleContainer=styled.div`
     margin-bottom:-8rem;
 `;
@@ -52,9 +48,12 @@ const Title=styled.img`
     
 `;
 
-const PortfolioScreen = () => {
+const PortfolioScreen = ({match}) => {
     const prevScrollY = useRef(0);
     const [goingUp, setGoingUp] = useState(false);
+    let { id } = match.params;
+    const imageHasLoaded = true;
+    const[project,saveProject]=useState({});
 
     useEffect(() => {
         const handleScroll = () => {
@@ -68,11 +67,23 @@ const PortfolioScreen = () => {
           prevScrollY.current = currentScrollY;
           console.log(goingUp, currentScrollY,prevScrollY);
         };
-    
+        const consultarApi=async()=>{
+            try{
+              const productoConsulta=await clienteAxios.get(`/proyectos/${id}`);
+              saveProject(productoConsulta.data);
+              await project;
+              console.log(project);
+  
+            }catch(error){
+              console.log(error);
+            }
+          }
+          consultarApi();
         window.addEventListener("scroll", handleScroll, { passive: true });
     
         return () => window.removeEventListener("scroll", handleScroll);
-      }, [goingUp]);
+        // eslint-disable-next-line 
+      }, [goingUp,id]);
 
     const scroll = (component) => {
         if(component){
@@ -93,13 +104,14 @@ const PortfolioScreen = () => {
 
 
     return ( 
-      
+        
                 // <div id="projects" style={{background:'black'}}>
-                    <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 0.15 } }}
-            transition={{ duration: 1,}}>
+            //         <motion.div 
+            // initial={{ opacity: 0 }}
+            // animate={{ opacity: 1 }}
+            // exit={{ opacity: 0, transition: { duration: 0.15 } }}
+            // transition={{ duration: 1,}}>
+            <Fragment>
                 <div style={{height:'120vh'}}>
                 <TitleContainer>
                      <Title alt="" src={Titles} className="animate__animated animate__slideInRight "/>
@@ -109,17 +121,26 @@ const PortfolioScreen = () => {
                      <div onClick={()=>scroll('#projects')}><span></span>Scroll</div>
                  </section>
                 </div>
-                 <motion.div id="projects"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 0.15 } }}
-            transition={{ duration: 1.2}}
-            
-            >
+                <div id="projects">
+                <List selectedId={id}  />
+                </div>
+                
+                <AnimatePresence >
+                {id && imageHasLoaded &&  <Item id={id} key="item"/>}
+                </AnimatePresence>
+                </Fragment>
 
-                    <List />
-                    </motion.div>
-                </motion.div>
+
+            //      <motion.div id="projects"
+            // initial={{ opacity: 0 }}
+            // animate={{ opacity: 1 }}
+            // exit={{ opacity: 0, transition: { duration: 0.15 } }}
+            // transition={{ duration: 1.2}}
+            // >
+
+            //         <List />
+            //         </motion.div>
+            //     </motion.div>
                 // </div>
 
         //</div>

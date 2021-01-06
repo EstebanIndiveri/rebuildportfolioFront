@@ -3,6 +3,9 @@ body{
 --divider: #343434;
 // background:rgb(177, 177, 177) !important;
 }
+.cover{
+  z-index: 1 !important;
+}
 .screen {
     width: 100% !important;
     height: 100% !important;
@@ -282,3 +285,4 @@ body{
   .cursor-pointer{
     cursor: pointer;
   }
+  

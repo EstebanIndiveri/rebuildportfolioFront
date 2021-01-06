@@ -1,34 +1,35 @@
 import React, {  Fragment,useState,useEffect } from 'react'
 
 import { motion } from "framer-motion";
-import { LoremIpsum } from "react-lorem-ipsum";
-import { Link, useHistory } from "react-router-dom";
-// import { items } from "./data";
+import { useHistory } from "react-router-dom";
 import '../ProjectsBorrador.scss';
 import clienteAxios from '../../../config/axios';
 
 
 
-export function Item({id}) {
-  // const[proyect,saveProject]=useState({});
+export function Item(props) {
   const[project,saveProject]=useState({});
-
+  // console.log(id);
   // consutar api cuando cargue
+const{id}=props;
+// console.log(props);
 useEffect(()=>{
+
   // api
       const consultarApi=async()=>{
           const productoConsulta=await clienteAxios.get(`/proyectos/${id}`);
-          console.log(productoConsulta.data);
-          saveProject(productoConsulta.data);
+          // console.log(productoConsulta.data);
+          await saveProject(productoConsulta.data);
           // console.log(project);
       }
-      consultarApi();
+        consultarApi();
       // eslint-disable-next-line
-  },[])
+  },[id])
 
 
   const history = useHistory();
     const{nombre,position,location,imagen,description,_id,url}=project;
+    // console.log(id);
 //   const { nombre,position,location,imagen,description,_id }=proyect;
   // let id=_id;
   // let imagen=false;
@@ -36,12 +37,12 @@ useEffect(()=>{
 // imagen&&
 //     console.log(nombre,description,`http://localhost:5000/${imagen}`);
 
-  
+
   return (  
        
     
     <Fragment>
-           {imagen&&(
+           {imagen?(
 
     <Fragment>
            {/* 
@@ -63,7 +64,8 @@ useEffect(()=>{
 
       </motion.div>
       <div  className="card-content-container open" >
-        <motion.div className="card-content" layoutId={`card-container-${_id}`}>
+        <motion.div className="card-content" layoutId={`card-container-${_id}`}
+        >
           
           <motion.div
             className="card-image-container cursor-pointer"
@@ -73,7 +75,6 @@ useEffect(()=>{
           >
             <img className="card-image" src={`http://localhost:5000/${imagen}`} alt="" />
 
-              
 
           </motion.div>
           <motion.div
@@ -100,7 +101,7 @@ useEffect(()=>{
       </div>
     </Fragment>
 
-      )}
+      ):null}
     </Fragment>
     
   );

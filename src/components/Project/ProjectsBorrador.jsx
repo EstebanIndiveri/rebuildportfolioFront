@@ -1,10 +1,10 @@
 import React, { useEffect,useState, Fragment } from 'react'
 import {Link} from 'react-router-dom';
 import clienteAxios from '../../config/axios';
-import Spinner from '../Spinner';
-import ProyectBorrador from './ProjectBorrador';
+// import Spinner from '../Spinner';
+// import ProyectBorrador from './ProjectBorrador';
 import './Project.scss';
-import { Col, Container, Row,Card, CardBody, CardTitle, CardSubtitle, CardText,Button } from 'reactstrap';
+import { Col, Container, Row,Card } from 'reactstrap';
 const ProjectsBorrador = () => {
 
 

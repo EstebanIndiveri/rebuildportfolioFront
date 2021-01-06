@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 import '../ProjectsBorrador.scss';
 import clienteAxios from '../../../config/axios';
 import { Header } from './Header';
-import Spinner from '../../Spinner';
+// import Spinner from '../../Spinner';
 
 
 
 function Card({ card }) {
-    const{nombre,position,location,imagen,description,_id}=card;
+  // location, url,description no se usan
+    const{nombre,position,imagen,_id}=card;
   // console.log(nombre);
   return (
     <li className={`card `}>
