@@ -13,7 +13,6 @@ import { Item } from '../../components/Project/test/Items';
 /* background-image:url(${bk});
 // import bk from '../../assets/bk.png'
 */
-
 // const Background=styled.div`
 // min-height:122vh;
 // `;
@@ -72,7 +71,7 @@ const PortfolioScreen = ({match}) => {
               const productoConsulta=await clienteAxios.get(`/proyectos/${id}`);
               saveProject(productoConsulta.data);
               await project;
-              console.log(project);
+              // console.log(project);
   
             }catch(error){
               console.log(error);
@@ -84,6 +83,9 @@ const PortfolioScreen = ({match}) => {
         return () => window.removeEventListener("scroll", handleScroll);
         // eslint-disable-next-line 
       }, [goingUp,id]);
+
+      
+      // console.log(over);
 
     const scroll = (component) => {
         if(component){

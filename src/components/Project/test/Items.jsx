@@ -29,20 +29,13 @@ useEffect(()=>{
 
   const history = useHistory();
     const{nombre,position,location,imagen,description,_id,url}=project;
-    // console.log(id);
-//   const { nombre,position,location,imagen,description,_id }=proyect;
-  // let id=_id;
-  // let imagen=false;
-//   const { nombre,position,location,imagen,description };
-// imagen&&
-//     console.log(nombre,description,`http://localhost:5000/${imagen}`);
-
+ 
 
   return (  
        
     
     <Fragment>
-           {imagen?(
+           {imagen&&(
 
     <Fragment>
            {/* 
@@ -64,7 +57,8 @@ useEffect(()=>{
 
       </motion.div>
       <div  className="card-content-container open" >
-        <motion.div className="card-content" layoutId={`card-container-${_id}`}
+        <motion.div className="card-content" layoutId={`card-container-${_id}`} initial={{ opacity: 0 }}
+        animate={{ opacity: 0,msTransitionDuration:3000 }}
         >
           
           <motion.div
@@ -92,16 +86,19 @@ useEffect(()=>{
               avgWordsPerSentence={6}
               avgSentencesPerParagraph={4}
             /> */}
-            {url&&(
-              <a href={url} target="_blank" alt="" rel="noreferrer">{url}</a>
-            )}
+            {url&&(<div className="text-center">
+              Link: <a href={url} target="_blank" alt="" rel="noreferrer">{url}</a>
+              </div>
+            )}<br/>
+            <p className="textoContainer text-justify w-100">
             {description}
+            </p>
           </motion.div>
         </motion.div>
       </div>
     </Fragment>
 
-      ):null}
+      )}
     </Fragment>
     
   );

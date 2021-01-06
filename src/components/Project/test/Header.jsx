@@ -6,7 +6,7 @@ export const Header = () => (
   <header>
     <span className="date">{moment().format("DD-MM-YYYY")}</span>
     <h3>Let's &nbsp; do &nbsp;it</h3>
-    <div className="avatar">
+    <div id="avatar">
       <img src={image} alt="" />
     </div>
   </header>
