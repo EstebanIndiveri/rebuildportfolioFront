@@ -132,3 +132,22 @@
 
   // background-color: #323232;
 }
+.test3d{
+  // transform: rotate3d(1, 1, 1, 45deg);
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(20px) ;
+
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

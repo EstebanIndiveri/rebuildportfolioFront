@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import '../ProjectsBorrador.scss';
 import clienteAxios from '../../../config/axios';
 import { Header } from './Header';
-// import Spinner from '../../Spinner';
+import Spinner from '../../Spinner';
 import styled from '@emotion/styled';
 
 const P=styled.p`
@@ -50,18 +50,29 @@ export function List({ selectedId }) {
     
     const[proyects,saveProjects]=useState([]);
 
+    const[positionProject,savePositionProject]=useState([]);
+    const[liste,saveListe]=useState(false);
+
     const consultarAPI=async()=>{
         // console.log('consultando');
         const proyectConsulta=await clienteAxios.get('/proyectos');
-        // console.log(proyectConsulta);
+        let positioncurrent=await(proyectConsulta.data.filter(e=>e.position==='FullStack'));
         saveProjects(proyectConsulta.data);
+        savePositionProject(positioncurrent);
     }
     // consutar api cuando cargue
     useEffect(()=>{
         // llamo a la query
             consultarAPI();
+        // console.log(positionProject);
+
     },[]);
-    // if(!proyects.length)return <Spinner/>
+    if(!proyects.length)return <Spinner/>
+
+    // let change=false;
+    const handleClick =()=>{
+      saveListe(!liste);
+    }
 
   return (
       <Fragment>
@@ -72,12 +83,24 @@ export function List({ selectedId }) {
         Nuevo Proyecto
     </Link> */}
     <div className="containerList" >
-
+    <div onClick={handleClick} style={{cursor:'pointer',color:'#a7a7a7'}}>Filter by position: {liste?'FullStack':'All'}</div>
+    {!liste?(
+        
+        
     <ul className="card-list">
+      
       {proyects.map(card => (
         <Card key={card._id} card={card} isSelected={card._id === selectedId} />
       ))}
     </ul>
+    ):
+    <ul className="card-list">
+      
+      {positionProject.map(card => (
+        <Card key={card._id} card={card} isSelected={card._id === selectedId} />
+      ))}
+    </ul>
+    }
       <P >And More</P>
     </div>
     

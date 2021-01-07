@@ -9,7 +9,8 @@ import {List} from '../../components/Project/test/List';
 import { AnimatePresence } from 'framer-motion';
 import clienteAxios from '../../config/axios';
 import { Item } from '../../components/Project/test/Items';
-// import iphone from '../../assets/3d-phone.png';
+import iphone from '../../assets/3d-phone.png';
+import business from '../../assets/business-3d.png';
 // import Projects from '../../components/Projects/Projects';
 /* background-image:url(${bk});
 // import bk from '../../assets/bk.png'
@@ -115,8 +116,9 @@ const PortfolioScreen = ({match}) => {
             // exit={{ opacity: 0, transition: { duration: 0.15 } }}
             // transition={{ duration: 1,}}>
             <Fragment>
+              <div className="fade-in-slowx2 " style={{position:'relative',top:'-20px',height:'20px'}}><img className="test3d" height="180px" src={iphone} alt=""/></div>
                 <div style={{height:'120vh'}}>
-                <TitleContainer>
+                <TitleContainer className="fade-in">
                      <Title alt="" src={Titles} className="animate__animated animate__slideInRight "/>
                  </TitleContainer>
                  
