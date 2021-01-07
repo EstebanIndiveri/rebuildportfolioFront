@@ -68,9 +68,9 @@ export function List({ selectedId }) {
     {/* <h2>Projects</h2> */}
     
     <Header/>
-    <Link to={'/projects/nuevo'}>
+    {/* <Link to={'/projects/nuevo'}>
         Nuevo Proyecto
-    </Link>
+    </Link> */}
     <div className="containerList" >
 
     <ul className="card-list">

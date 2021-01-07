@@ -9,6 +9,7 @@ import {List} from '../../components/Project/test/List';
 import { AnimatePresence } from 'framer-motion';
 import clienteAxios from '../../config/axios';
 import { Item } from '../../components/Project/test/Items';
+// import iphone from '../../assets/3d-phone.png';
 // import Projects from '../../components/Projects/Projects';
 /* background-image:url(${bk});
 // import bk from '../../assets/bk.png'
@@ -118,11 +119,13 @@ const PortfolioScreen = ({match}) => {
                 <TitleContainer>
                      <Title alt="" src={Titles} className="animate__animated animate__slideInRight "/>
                  </TitleContainer>
+                 
                  <p className="text-center portfolioSubTitle animate__animated animate__fadeIn animate__delay-1s">these are some of my projects</p>
                  <section id="section10" className="demo fade-in-slowx2">
                      <div onClick={()=>scroll('#projects')}><span></span>Scroll</div>
                  </section>
                 </div>
+                
                 <div id="projects">
                 <List selectedId={id}  />
                 </div>
