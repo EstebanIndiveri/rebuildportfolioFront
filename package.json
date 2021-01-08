@@ -38,6 +38,7 @@
     "react-helmet": "^6.1.0",
     "react-lorem-ipsum": "^1.4.9",
     "react-parallax-mousemove": "^1.1.0",
+    "react-pdf": "^5.1.0",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",

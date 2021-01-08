@@ -31,9 +31,10 @@ body{
     text-transform: uppercase !important;
   }
   
-  header {
+  .headerr {
     border-bottom: 1px solid var(--divider) !important;
     position: relative !important;
+    padding-top: 1rem;
   }
   
   #avatar {
@@ -191,11 +192,18 @@ body{
     top: 15px !important;
     left: 15px !important;
     max-width: 300px !important;
+    background-color: #32323244;
+    width: 100%;
+    border-radius: 20px;
+    padding: 1rem;
   }
   
   .open .title-container {
     top: 30px !important;
     left: 30px !important;
+    background: none;
+    border-radius: none;
+
   }
   
 
@@ -221,7 +229,9 @@ body{
     // background: rgba(121, 121, 121, 0.897) !important;
     
     // background: rgba(221, 163, 96, 0.877) !important;
-    background: #8bc9dc !important;
+    // background: #8bc9dc !important;
+
+    background: rgba(202, 202, 202, 0.945) !important;
 
 
 

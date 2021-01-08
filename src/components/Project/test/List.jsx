@@ -83,7 +83,7 @@ export function List({ selectedId }) {
         Nuevo Proyecto
     </Link> */}
     <div className="containerList" >
-    <div onClick={handleClick} style={{cursor:'pointer',color:'#a7a7a7'}}>Filter by position: {liste?'FullStack':'All'}</div>
+    <div onClick={handleClick} style={{cursor:'pointer',color:'#a7a7a7'}}>Filter by position: <b>{liste?'FullStack':'All'}</b></div>
     {!liste?(
         
         
