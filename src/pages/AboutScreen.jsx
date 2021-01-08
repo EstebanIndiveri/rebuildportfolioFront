@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { Col, Container, Row } from 'reactstrap';
+import { Button, Col, Container, Row } from 'reactstrap';
 // import handphone from '../assets/handphone.png';
 import { Document, Page } from 'react-pdf';
 import ParallaxImagesContainerAbout from '../components/ParralaxAbout';
@@ -7,7 +7,8 @@ import './AboutScreen.scss';
 import pdf from '../assets/Cv_Indiveri_Esteban.pdf';
 import 'react-pdf/dist/umd/Page/AnnotationLayer.css';
 import { pdfjs } from 'react-pdf';
-
+import perfil from '../assets/perfil-black.jpg'
+import hand from '../assets/hand3d.png'
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const AboutScreen = () => {
@@ -18,15 +19,19 @@ const AboutScreen = () => {
     setNumPages(numPages);
     setPageNumber(1);
   }
+ 
 
     return ( 
+        <>
+
+
         <Container>
             <Row md={12} className="mt-2 ">
               
-                <Col md={6} sm={6} className="parallaxAbout fade-in ">
+                <Col md={6} sm={12} className="parallaxAbout fade-in ">
                     <ParallaxImagesContainerAbout/>
                 </Col>
-                <Col md={6} sm={6}>
+                <Col md={6} sm={12}>
                 <div className="mt-5">
                 {/* <img src={handphone} alt="" height="300px"></img> */}
 
@@ -37,10 +42,31 @@ const AboutScreen = () => {
                     </div>
                 </Col>                
             </Row>
+            <div class="container22 text-center animate__animated animate__fadeIn animate__delay-3s animate__slower">
+            <div class="object">
+                    <img src={perfil} alt="" className="object__img"/>
+                    <div className="object__intro">
+                    <h1 className="object__intro-title">Full Stack Dev</h1>
+                    <p className="object__intro-text">I'm ready to work with right now, you can see my cv under here </p>
+                    </div>
+                </div>
 
-            <Row xs={12}  style={{height:'100vh',marginTop:'10rem'}}>
+                <div class="arrow">
+                    <div class="arrow__body"></div>
+                </div>
+            </div>
+
+
+            <iframe id="my_iframe" style={{display:'none'}} title="my_iframe" src={pdf}></iframe>
+            <Row xs={12}  style={{height:'100vh',marginTop:'3rem'}}>
                 <Col >
-                    <h1 className="text-center">My CV</h1>
+                <div className="mx-auto text-center">
+                    <h1 className="text-center mb-3 cv_title">My CV</h1>
+                    <a
+                    download={pdf} 
+                    href={pdf}
+                    ><Button className="mb-3">Download</Button></a>
+                </div>
                     <div style={{marginLeft:'14rem',marginTop:'2rem',marginBottom:'2rem'}}>
                     <Document
                         file={pdf}
@@ -50,11 +76,12 @@ const AboutScreen = () => {
                 <Page pageNumber={1} />
                     </Document>
                     </div>
-                    
-                    
+                  
                 </Col>
+                <img src={hand} alt="" height="120px"></img>
             </Row>
             </Container>
+            </>
      );
 }
  

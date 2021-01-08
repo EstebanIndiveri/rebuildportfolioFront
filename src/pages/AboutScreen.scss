@@ -1,3 +1,144 @@
 .parallaxAbout{
     margin-top: 5rem;
 }
+
+.container22 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    --bg-color: #f5b46b;
+  --highlight-color: #8bc9dc;
+  margin-top: -12rem;
+  margin-left: -4rem;
+
+  @media(max-width: 994px){
+    margin-left: -18rem;
+
+  }
+  @media(max-width: 994px){
+  display: none;    
+
+  }
+  }
+  .cv_title{
+    color:#8bc9dc;
+  }
+.object {
+    position: relative;
+    width: 200px;
+    left: 300px;
+    height: 200px;
+    z-index: 1;
+    
+  }
+  
+  .object__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid var(--highlight-color);
+    border-radius: 50%;
+    // transition: transform .3s ease-in-out;
+
+    animation-name: upper;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    // &:hover{
+    //     transform:translateY(-.3rem);
+    //     cursor:pointer;
+    // }
+  }
+  
+  @keyframes upper {
+    0% {
+      transform: translateY(0rem);
+    }
+    50%{
+      transform:translateY(-.3rem); ;
+  
+    }
+    100% {
+      transform: translateY(0rem);
+    }
+  }
+
+
+
+  .object__intro {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    width: 300px;
+    padding-left: 20px;
+    color: var(--highlight-color);
+  }
+  
+  .object__intro-text {
+    line-height: 1.5;
+  }
+  
+  .arrow {
+    position: relative;
+    bottom: 0;
+    top: 117px;
+    left: -62px;
+    width: calc(30% - 200px);
+    height: 30%;
+
+    @media(max-height:762px){
+    width: calc(50% - 200px);
+    height: 30%;
+    }
+    @media(max-height:1000px){
+      width: calc(50% - 200px);
+    height: 30%;
+      }
+      @media(max-height:1200px){
+        width: calc(47% - 200px);
+      height: 30%;
+        }
+        @media(max-height:700px)and(min-width:1200px){
+          width: calc(47% - 200px);
+        height: 60%;
+          }
+          @media(max-height:700px)and(min-width:1360px){
+            width: calc(47% - 200px);
+      height: 40%;
+            }
+    /* uncomment to see the arrow's rectangle bg*/
+  /*   background: white;  */
+  }
+  
+  .arrow__body {
+    width: 100%;
+    height: 95%;
+    margin-left: 11px;
+    border-width: 5px 0 0 5px;
+    border-style: dashed;
+    border-color: var(--highlight-color);
+    border-top-left-radius: 100%;
+  }
+  
+  .arrow__body::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 20px 15px 0;
+    border-style: solid;
+    border-color: var(--highlight-color) transparent transparent;
+  }
+  
+  @media (max-width: 768px) {
+    .object__intro {
+      top: -100%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 70vw;
+      padding: 0;
+    }
+  }

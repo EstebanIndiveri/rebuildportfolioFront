@@ -166,9 +166,11 @@ const PortfolioScreen = ({match}) => {
                 <List selectedId={id}  />
                 {!goingUp?(
                   <div className="fade-in" style={{boxShadow:'0px 0px 7px 1px #323232',transition:'all 300ms ease-in-out',paddingTop:'.4rem',paddingBottom:'.4rem',backgroundColor:"#323232",fontSize:"15px",borderRadius:'15px',width:'100px',position:'fixed',zIndex:'999',bottom:'0',cursor:'pointer'}} onClick={()=>scroll('#top')}>
-                    <p className="text-center mb-0 text-white">Al top</p>
+                    <p className="text-center mb-0 text-white">Back to top</p>
                   </div>
-                ):null}
+                ):
+                  null
+                }
                 </div>
                 
                 <AnimatePresence >
