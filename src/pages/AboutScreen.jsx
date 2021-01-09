@@ -100,6 +100,11 @@ const AboutScreen = () => {
                 </Controller>
                 </div>
                 </Col>
+        <div className="clearfix m-4"></div>
+
+                <Col sm={12} style={{marginTop:'30rem'}}>
+                <h2 className="text-center">Soft Skills</h2>
+            </Col>
             </Row>
       
             </Container>
@@ -123,6 +128,7 @@ const AboutScreen = () => {
             </Controller>
             </div>
         </div>
+           
             </Fragment>
      );
 }

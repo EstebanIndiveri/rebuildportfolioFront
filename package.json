@@ -47,6 +47,7 @@
     "react-scroll-parallax": "^2.3.5",
     "react-scrollmagic": "^2.2.0",
     "react-typed": "^1.2.0",
+    "react-unveil": "0.0.2",
     "reactstrap": "^8.8.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
