@@ -158,8 +158,9 @@ const PortfolioScreen = ({match}) => {
                      <div onClick={()=>scroll('#projects')}><span></span>Scroll</div>
                  </section>
                  </div>
-                 <div className="fade-in-slow" style={{zIndex:'-999',position:'relative',marginLeft:'52rem',marginTop:'-2rem',borderRadius:'100%',height:'500px',width:'500px',background:'rgba(206, 206, 206, 0.548)'}}/>
-                
+                 <div className="fade-in-slow" style={{zIndex:'-999',position:'relative',marginLeft:'52rem',marginTop:'-2rem',borderRadius:'100%',height:'500px',width:'500px',background:'rgba(217,221,230, 0.21) '}}/>
+                 {/* rgba(206, 206, 206, 0.548) */}
+                {/* rgba(217,221,230, 0.21) */}
                 </div>
                 
                 <div id="projects">

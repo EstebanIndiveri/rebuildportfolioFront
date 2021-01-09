@@ -11,8 +11,9 @@
     width: 100%;
     --bg-color: #f5b46b;
   --highlight-color: #8bc9dc;
-  margin-top: -12rem;
+  margin-top: -10rem;
   margin-left: -4rem;
+  // display: none;
 
   @media(max-width: 994px){
     margin-left: -18rem;
@@ -142,3 +143,42 @@
       padding: 0;
     }
   }
+
+  .scrollmagic-pin-spacer{
+z-index: -999 !important;
+  }
+
+  .aboutScreen{
+    @media(max-width: 768px){
+    overflow-x: hidden !important;
+
+    }
+  }
+  .conta{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .documentopdf{
+    @media(max-width: 680px){
+    margin-left:4rem !important;
+    .react-pdf__Document .react-pdf__Page .react-pdf__Page__canvas{
+      width: 90% !important;
+      height:90% !important;
+      
+    }
+    }
+  }
+.handshake{
+  margin-left: 20rem;
+  margin-top: 20rem;
+  @media(max-width: 768px){
+    display: none;
+  }
+}
+.coffe{
+  @media(max-width: 768px){
+    display: none;
+  }
+}
