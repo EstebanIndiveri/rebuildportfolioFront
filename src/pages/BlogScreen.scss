@@ -4,11 +4,17 @@
 }
 
 .onfocusback{
-    background-color: #b1b1b1 ;
+    background-color: #cccccc ;
 }
 
 .enter{
-    // height: 100vh;
-    top:0;
-    position: relative;
+    height: 100vh;
+
+}
+
+.boxshadow{
+    box-shadow: 0px 0px 20px 5px #979797;
+}
+.interSub{
+    text-align: center !important;
 }
