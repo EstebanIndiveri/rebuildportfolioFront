@@ -1,8 +1,14 @@
-import React from 'react'
-import { Col, Container, Row } from 'reactstrap';
+import React,{Fragment, useState} from 'react'
+import { Col, Container, Row} from 'reactstrap';
 import styled from '@emotion/styled';
 import clienteAxios from '../config/axios';
-import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faEnvelope, faEnvelopeOpenText} from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 
 const Title=styled.h1`
     font-size:2.3rem;
@@ -49,9 +55,21 @@ const ButtonSubmit=styled.button`
         margin-bottom:3rem;
     }
 `;
+const DivList=styled.div`
+    align-items:center;
+    text-align:center;
+    margin-top:2.5rem;
+    ul{
+        font-size:1.2rem;
+        li{
+            margin-bottom:10px !important;
+        }
+    }
+`;
 
 
 const ContactScreen = () => {
+    const [send, setSend] = useState(false);
     const [form, setForm] = useState({
         name:'',
         email:'',
@@ -63,11 +81,77 @@ const ContactScreen = () => {
             ...form,
             [target.name]: target.value
         });
-        console.log(form);
+        if(form.email===''||form.name===''||form.message===''){
+            setSend(false);
+            console.log(send);
+        }
+        setSend(true);
+
     }
-    const [send, setSend] = useState(false);
+
+    const handleSubmitForm=async e=>{
+        e.preventDefault();
+        try {
+            setSend(true);
+            const resp=await clienteAxios.post('/sendemail',form,{
+                headers:{
+                    'Content-type':'application/json'
+                }
+            });
+            console.log(resp);
+            if(resp.status===200){
+            setSend(false);
+                setTimeout(() => {
+                    resetForm();
+                }, 1000);
+                toast.dark('🦄 Your Email was send!', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    });
+            }
+        } catch (error) {
+            console.log(error);
+            toast.warn("🦄 We can't send your email, try again!", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
+        }
+    }
+
+
+    const resetForm=()=>{
+        setForm({
+        name:'',
+        email:'',
+        message:''
+        });
+    }
 
     return ( 
+        <Fragment>
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                />
+                {/* Same as */}
+                <ToastContainer />
             <Container className="mt-5">
                 <Row>
         {/* <Title title="Contact us"/> */}
@@ -77,8 +161,8 @@ const ContactScreen = () => {
         <div className="ml-3 ">
             <form
                 // action="https://formspree.io/f/mnqozzkn"
-                onSubmit={(e)=>e.preventDefault()}
-                // method="POST"
+                onSubmit={handleSubmitForm}
+                method="POST"
                 >
                 <div className="form-group">
                     <Label htmlFor="name">Nombre</Label>
@@ -121,18 +205,25 @@ const ContactScreen = () => {
                     />
                 </div>
 
-                <ButtonSubmit type="submit" className="btn btn-yellow btn-block text-capitalize mt-5">Enviar</ButtonSubmit>
+                <ButtonSubmit disabled={!send} type="submit" className="btn btn-yellow btn-block text-capitalize mt-5">Enviar</ButtonSubmit>
             </form>
         </div>
         </section>
         </Col>
         <Col xs={12} lg={6} md={6}>
             <h1 className="text-center">other ways to contact</h1>
-            <div>{process.env.REACT_APP_TOTTALY_NOT_SECRET}</div>
+            <DivList>
+                <ul>
+                    <li><FontAwesomeIcon className="socialLink" icon={faEnvelopeOpenText} size="lg" color="#8BC9DC" width="30" />Email</li>
+                    <li><FontAwesomeIcon className="socialLink" icon={faGithub} size="lg" color="#8BC9DC" width="30" />Github</li>
+                    <li><FontAwesomeIcon className="socialLink" icon={faWhatsapp} size="lg" color="#8BC9DC" width="30" />Telephone with api wsp</li>
+                    <li><FontAwesomeIcon className="socialLink" icon={faEnvelope} size="lg" color="#8BC9DC" width="30" />secondary email</li>
+                </ul>
+            </DivList>
         </Col>
         </Row>
             </Container>
-           
+            </Fragment>
 
      );
 }

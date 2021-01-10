@@ -46,6 +46,7 @@
     "react-scripts": "4.0.1",
     "react-scroll-parallax": "^2.3.5",
     "react-scrollmagic": "^2.2.0",
+    "react-toastify": "^6.2.0",
     "react-typed": "^1.2.0",
     "react-unveil": "0.0.2",
     "reactstrap": "^8.8.0",
