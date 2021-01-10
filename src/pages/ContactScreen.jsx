@@ -4,10 +4,11 @@ import styled from '@emotion/styled';
 import clienteAxios from '../config/axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faEnvelope, faEnvelopeOpenText} from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelopeOpenText} from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import AnimatedCard from '@rihor/react-3d-card/dist/AnimatedCard';
+import image from '../assets/perfil-black.jpg'
 
 
 const Title=styled.h1`
@@ -15,6 +16,7 @@ const Title=styled.h1`
     margin:0;
     padding:0;
     color:#8BC9DC;
+    text-align:center;
 `;
 
 const Label=styled.label`
@@ -61,12 +63,27 @@ const DivList=styled.div`
     margin-top:2.5rem;
     ul{
         font-size:1.2rem;
+        a{
+            text-decoration:none;
+            color:#323232;
+        }
         li{
-            margin-bottom:10px !important;
+            margin-bottom:12px !important;
+            svg{
+            transition: transform .3s ease-in-out;
+                &:hover{
+                    transform:translateY(-.2rem);
+                    cursor:pointer;
+                }
+            }
         }
     }
 `;
+const TitleOther=styled.h1`
+    color:#8bc9dc;
+    text-align:center;
 
+`;
 
 const ContactScreen = () => {
     const [send, setSend] = useState(false);
@@ -104,7 +121,7 @@ const ContactScreen = () => {
                 setTimeout(() => {
                     resetForm();
                 }, 1000);
-                toast.dark('🦄 Your Email was send!', {
+                toast.dark('😀 Your Email was send!', {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -116,7 +133,7 @@ const ContactScreen = () => {
             }
         } catch (error) {
             console.log(error);
-            toast.warn("🦄 We can't send your email, try again!", {
+            toast.warn("😧 We can't send your email, try again!", {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -153,25 +170,24 @@ const ContactScreen = () => {
                 {/* Same as */}
                 <ToastContainer />
             <Container className="mt-5">
-                <Row>
+                <Row className="fade-in">
         {/* <Title title="Contact us"/> */}
-        <Col xs="12" lg="6" md="6">
-            <Title>Contacte conmigo</Title>
+        <Col xs="12" lg="6" md="6" >
+            <Title>Let's talk</Title>
         <section  className="contact py-5">
         <div className="ml-3 ">
             <form
-                // action="https://formspree.io/f/mnqozzkn"
                 onSubmit={handleSubmitForm}
                 method="POST"
                 >
                 <div className="form-group">
-                    <Label htmlFor="name">Nombre</Label>
+                    <Label htmlFor="name">Name</Label>
                     <Input 
                     type="text" 
                     className="form-control" 
                     name="name" 
                     id="name" 
-                    placeholder="Ingrese su nombre" 
+                    placeholder="Insert your name" 
                     required
                     value={form.name}
                     onChange={handleInputChange}
@@ -193,33 +209,56 @@ const ContactScreen = () => {
                 </div>
 
                 <div className="form-group">
-                    <Label htmlFor="message">Consulta</Label>
+                    <Label htmlFor="message">Message</Label>
                     <TextArea 
                     name="message" 
                     id="description" 
                     className="form-control" 
                     rows="5" 
-                    placeholder="Su mensaje aquí..."
+                    required
+                    placeholder="Your message here..."
                     value={form.message}
                     onChange={handleInputChange}
                     />
                 </div>
 
-                <ButtonSubmit disabled={!send} type="submit" className="btn btn-yellow btn-block text-capitalize mt-5">Enviar</ButtonSubmit>
+                <ButtonSubmit disabled={!send} type="submit" className="btn btn-yellow btn-block text-capitalize mt-5">Send</ButtonSubmit>
             </form>
         </div>
         </section>
         </Col>
         <Col xs={12} lg={6} md={6}>
-            <h1 className="text-center">other ways to contact</h1>
+            <TitleOther >other ways to contact</TitleOther>
             <DivList>
                 <ul>
-                    <li><FontAwesomeIcon className="socialLink" icon={faEnvelopeOpenText} size="lg" color="#8BC9DC" width="30" />Email</li>
-                    <li><FontAwesomeIcon className="socialLink" icon={faGithub} size="lg" color="#8BC9DC" width="30" />Github</li>
-                    <li><FontAwesomeIcon className="socialLink" icon={faWhatsapp} size="lg" color="#8BC9DC" width="30" />Telephone with api wsp</li>
-                    <li><FontAwesomeIcon className="socialLink" icon={faEnvelope} size="lg" color="#8BC9DC" width="30" />secondary email</li>
+                    <a href="mailto:esteban.indiveri@gmail.com" target="_blank" rel="noreferrer"><li><FontAwesomeIcon className="socialLink" icon={faEnvelopeOpenText} size="lg" color="#8BC9DC" width="30" /> &nbsp; Email: esteban.indiveri@gmail.com</li></a>
+                    <a href="https://github.com/EstebanIndiveri" target="_blank" rel="noreferrer"><li><FontAwesomeIcon className="socialLink" icon={faGithub} size="lg" color="#8BC9DC" width="30" /> &nbsp; Github: Esteban Indiveri</li></a>
+                    <a href="https://wa.me/543512694707?text=Buenos%20días%20Esteban%20Indiveri%20,%20me%20contacto%20para%20hablar%20sobre%20una%20propuesta%20laboral." target="_blank" rel="noreferrer"><li><FontAwesomeIcon className="socialLink" icon={faWhatsapp} size="lg" color="#8BC9DC" width="30" /> &nbsp; Phone: +543512694707</li></a>
+                    <a href="https://www.linkedin.com/in/esteban-indiveri/" target="_blank" rel="noreferrer"><li><FontAwesomeIcon className="socialLink" icon={faLinkedin} size="lg" color="#8BC9DC" width="30" /> &nbsp; Linkedin: esteluca89@hotmail.com</li></a>
                 </ul>
             </DivList>
+
+            <div style={{width:'80%',margin:'0 auto',marginTop:'2rem'}}>
+                <AnimatedCard weight={1} clickable={true}>
+                    <div style={{background:"FFF",boxShadow:'1px 1px 5px 2px rgb(244 244 244)',display:'flex',justifyContent:'space-between',alignItems:'center',textAlign:'center',padding:'1rem',borderRadius:'10px'}}>
+                    <div>
+                    <img style={{opacity:'0.7',borderRadius:'5px'}} src={image} alt="" height="140px"/>
+                    </div>
+                    <div>
+                        <h5>Esteban &nbsp; Indiveri</h5>
+                        <hr/>
+                        <p style={{marginBottom:'2px'}}>Developer, UX/UI Designer</p>
+                        <div>
+                            <ul>
+                                <li>FrontEnd</li>
+                                <li>Backend</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </AnimatedCard>
+            </div>
         </Col>
         </Row>
             </Container>

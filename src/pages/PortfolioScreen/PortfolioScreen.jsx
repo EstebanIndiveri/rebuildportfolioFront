@@ -138,10 +138,10 @@ const PortfolioScreen = ({match}) => {
             // exit={{ opacity: 0, transition: { duration: 0.15 } }}
             // transition={{ duration: 1,}}>
             <Fragment>
-              <div className="fade-in " id="top" style={{top:'100px',height:'20px'}}>
+              <div className="fade-in" id="top" style={{top:'100px',height:'20px'}}>
                 <img className="test3d" height="400px" src={iphone} alt=""/></div>
           
-                <div style={{height:'120vh',background:'rgba(238, 238, 238, 0.089)'}}>
+                <div className="overflow-hidden" style={{height:'120vh',background:'rgba(238, 238, 238, 0.089)'}}>
                   <div className="row">
                   <div className="col-md-6 col-lg-6 col-sm-12">
                 <TitleContainer className="fade-in">
@@ -158,7 +158,7 @@ const PortfolioScreen = ({match}) => {
                      <div onClick={()=>scroll('#projects')}><span></span>Scroll</div>
                  </section>
                  </div>
-                 <div className="fade-in-slow" style={{zIndex:'-999',position:'relative',marginLeft:'52rem',marginTop:'-2rem',borderRadius:'100%',height:'500px',width:'500px',background:'rgba(217,221,230, 0.21) '}}/>
+                 <div className="fade-in-slow elpises" style={{zIndex:'-999',position:'relative',marginLeft:'52rem',marginTop:'-2rem',borderRadius:'100%',height:'500px',width:'500px',background:'rgba(217,221,230, 0.21) '}}/>
                  {/* rgba(206, 206, 206, 0.548) */}
                 {/* rgba(217,221,230, 0.21) */}
                 </div>

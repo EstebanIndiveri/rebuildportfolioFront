@@ -86,6 +86,9 @@ text-align:center;
 display:block;
 justify-content:center;
 margin:0 auto;
+@media(max-width:768px){
+    width:100%;
+}
 `;
 
 const scroll = (component) => {
@@ -127,7 +130,7 @@ const thirdScrollToggle=()=>{
 }
 
     return ( 
-        <div className={`${isOpen?'onfocusback ':'total'}`} >
+        <div className={`${isOpen||secondOpen||thirdOpen?'onfocusback ':'total'}`} >
             <Container className="fade-in" style={{backgroundColor:'#eeeeee',borderRadius:'10px'}} >
             <Row md={12}>
                 <Col md={12} sm={12} xs={12} className="mt-4">
@@ -144,8 +147,8 @@ const thirdScrollToggle=()=>{
                     <Title >Fresh blog</Title>
                     <SubTitle >You can read a new entries about soft and tech</SubTitle>
                 </Col>
-
-                <Col xs={12} sm={{size:8,offset:2}} >
+{/* sm={{size:8,offset:2}}  */}
+                <Col xs={12} lg={{size:10,offset:1}} >
                     <NewEntry id="FirstBlog" className={`${isOpen&&'mb-5 boxshadow'}`}>
                         <h4 className="cursor-pointer" onClick={scrollandToggle} >ThreeJS</h4>
                         <hr/>
@@ -161,7 +164,7 @@ const thirdScrollToggle=()=>{
                     </NewEntry>
                 </Col>
 
-                <Col xs={12} sm={{size:8,offset:2}}>
+                <Col xs={12} lg={{size:10,offset:1}} >
                 <NewEntry  className={`${secondOpen&&'mb-5  boxshadow'}`}>
                         <h4  id="SecondBlog" className="cursor-pointer" onClick={secondScrollToggle} >What is React JS?</h4>
                         <hr/>
@@ -179,7 +182,7 @@ const thirdScrollToggle=()=>{
                     </NewEntry>
                 </Col>
 
-                <Col xs={12} sm={{size:8,offset:2}}>
+                <Col xs={12} lg={{size:10,offset:1}} >
                 <NewEntry id="thirdBlog" className={`${thirdOpen&&'mb-5 boxshadow'}`}>
                         <h4 className="cursor-pointer" onClick={thirdScrollToggle} >GatsbyJs</h4>
                         <hr/>

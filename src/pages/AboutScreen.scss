@@ -182,3 +182,12 @@ z-index: -999 !important;
     display: none;
   }
 }
+
+.aboutskills{
+  @media(max-width:992px){
+    margin-bottom: 40rem;
+  }
+  @media(max-width:500px){
+    margin-bottom: 45rem;
+  }
+}

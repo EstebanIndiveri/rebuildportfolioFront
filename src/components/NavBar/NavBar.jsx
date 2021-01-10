@@ -79,22 +79,22 @@ const Navbar = () => {
                      <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
                         <NavItem className="port-navbar-item blog" >
-                            <Link className={window.location.pathname==="/home"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/home">Home</Link>
+                            <Link className={window.location.pathname==="/home"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/home" onClick={toggle}>Home</Link>
                         </NavItem>
 
                         <NavItem className="port-navbar-item">
-                            <Link className={window.location.pathname==="/portfolio"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/portfolio">portfolio</Link>
+                            <Link className={window.location.pathname==="/portfolio"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/portfolio" onClick={toggle}>portfolio</Link>
                         </NavItem>
                         <NavItem className="port-navbar-item">
-                            <Link className={window.location.pathname==="/about"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/about">About</Link>
-                        </NavItem>
-
-                        <NavItem className="port-navbar-item">
-                            <Link className={window.location.pathname==="/blog"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/blog">Blog</Link>
+                            <Link className={window.location.pathname==="/about"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/about" onClick={toggle}>About</Link>
                         </NavItem>
 
                         <NavItem className="port-navbar-item">
-                            <Link className={window.location.pathname==="/contact"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/contact">Contact</Link>
+                            <Link className={window.location.pathname==="/blog"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/blog" onClick={toggle}>Blog</Link>
+                        </NavItem>
+
+                        <NavItem className="port-navbar-item">
+                            <Link className={window.location.pathname==="/contact"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/contact" onClick={toggle}>Contact</Link>
                         </NavItem>
 
                         {/* <NavItem className="port-navbar-item">

@@ -9,7 +9,7 @@ const createCardFlipId = index => `listItem-${index}`;
 const colors = ["#fafeff", "#FAFEFF", "#F8FEFF"];
 
 const data = ["Web Design - FullStack Developer", "UX/UI designer", "MobileDeveloper"];
-const subdata=["Web Developer with the most recent frameworks from javascript, css and sass with React Angular, and VueJs","Sigle Page Application and Progressive Web App","User Experience and User Interface focus"];
+const subdata=["Web Developer with the most recent developer frameworks ","Sigle Page Application and Progressive Web App","User Experience and User Interface focus"];
 const uxui=["User Interface","Wireframes, Prototypes and Mockups","Animations and design in Figma, Adobe xd, Invision"];
 const mobile=["Design interface","Developer in React-Native, Flutter and Kotlin", "Cross Platform"]
 // eslint-disable-next-line

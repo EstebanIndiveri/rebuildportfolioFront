@@ -7,8 +7,30 @@ import './AboutScreen.scss';
 import pdf from '../assets/Cv_Indiveri_Esteban.pdf';
 import 'react-pdf/dist/umd/Page/AnnotationLayer.css';
 import { pdfjs } from 'react-pdf';
-import perfil from '../assets/perfil-black.jpg'
-import hand from '../assets/businesscoffe.png'
+import perfil from '../assets/perfil-black.jpg';
+import hand from '../assets/businesscoffe.png';
+import icon3dcode1 from '../assets/icon3dcode1.png';
+import icon3dcode2 from '../assets/icon3dcode2.png';
+import icon3dnotes from '../assets/icon3dnotes.png';
+import icon3dtable from '../assets/icon3dtabla.png';
+import icon3dcel from '../assets/icon3dcel.png';
+import icon3dtest from '../assets/icon3d__test.png';
+import icon3dDesign from '../assets/icon3d__design.png';
+import icon3dcommunication from '../assets/icon3d__communitaction.png';
+import icon3dwork from '../assets/icon3dwork.png';
+import icon3dTeam from '../assets/icon3d__team.png';
+
+import AnimatedCard from '@rihor/react-3d-card/dist/AnimatedCard';
+
+
+
+
+
+
+
+
+
+
 // import phone from '../assets/Phone.png'
 // import phone from '../assets/Saly-8.png'
 import phone from '../assets/handshake.png'
@@ -45,6 +67,61 @@ const AboutScreen = () => {
                     </div>
                 </Col>                
             </Row>
+            <Row className="aboutskills" style={{height:'110vh',marginTop:'4rem',background:'#fcfcfc',borderRadius:'10px'}}>
+        <Col sm={12} lg={6}  >
+        <AnimatedCard weight={0.2} clickable={true}>
+
+                <h2 className="text-center">Soft Skills</h2>
+                <ul>
+                    <li className="mb-4">
+                        <img src={icon3dcommunication} alt="" width="120px" style={{opacity:"0.66"}}/> 
+                        Communication
+                    </li>
+                    <li className="mb-4">
+                        <img src={icon3dnotes} alt="" width="120px" style={{opacity:"0.66"}}/> 
+                        Positive Attitude
+                    </li> 
+                    <li >
+                        <img src={icon3dtable} alt="" width="120px" style={{opacity:"0.66"}}/> 
+                        Critical Thinking
+                    </li>
+                    <li >
+                        <img src={icon3dTeam} alt="" width="120px" style={{opacity:"0.66"}}/> 
+                        Teamwork
+                    </li>
+                    <li >
+                        <img src={icon3dwork} alt="" width="120px" style={{opacity:"0.66"}}/> 
+                        Leadership
+                    </li>
+                </ul>
+                </AnimatedCard>
+            </Col>
+            <Col sm={12} lg={6} >
+            <AnimatedCard weight={0.3} clickable={true}>
+                <h2 className="text-center">Soft Skills</h2>
+                <ul>
+                    <li>
+                        <img src={icon3dcode1} alt="" width="120px" style={{opacity:"0.66"}}/><img src={icon3dcode2} alt="" width="120px" style={{opacity:"0.66",marginLeft:'-5rem',marginRight:'-2rem'}}/> 
+                        Software Languages and last frameworks
+                    </li>
+                    <li>
+                        <img src={icon3dtest} alt="" width="120px" style={{opacity:"0.66"}}/> 
+                        Unit Test, Manual Test, automation test "Selemiun"
+                    </li>
+                    <li>
+                        <img src={icon3dcel} alt="" width="120px" style={{opacity:"0.66"}}/> 
+                        Mobile Developer: React-Native, Flutter, Kotlin
+                    </li>
+                    <li>
+                        <img src={icon3dDesign} alt="" width="120px" style={{opacity:"0.66"}}/> 
+                        Designer UX/UI: Adobe XD, Figma, Invision, framer
+                    </li>
+                </ul>
+                </AnimatedCard>
+            </Col>
+        
+        </Row>
+           
             <div class="container22 text-center animate__animated animate__fadeIn animate__delay-3s animate__slower">
             <div class="object">
                     <img src={perfil} alt="" className="object__img"/>
@@ -102,14 +179,11 @@ const AboutScreen = () => {
                 </Col>
         <div className="clearfix m-4"></div>
 
-                <Col sm={12} style={{marginTop:'30rem'}}>
-                <h2 className="text-center">Soft Skills</h2>
-            </Col>
             </Row>
       
             </Container>
             <div className="clearfix"/>
-            <div style={{marginTop:'-40rem',zIndex:'-999'}}>
+            <div style={{marginTop:'-40rem',zIndex:'-999',height:'100vh'}}>
          
          <div className="coffe">
             <Controller>
@@ -128,7 +202,10 @@ const AboutScreen = () => {
             </Controller>
             </div>
         </div>
-           
+        {/* <div className="fade-in" style={{boxShadow:'0px 0px 7px 1px #eee',transition:'all 300ms ease-in-out',paddingTop:'.4rem',paddingBottom:'.4rem',backgroundColor:"#eee",fontSize:"15px",borderRadius:'15px',width:'40px',position:'fixed',zIndex:'999',bottom:'1rem',left:'95%',cursor:'pointer'}} >
+                    <p className="text-center mb-0 ">?</p>
+                  </div> */}
+     
             </Fragment>
      );
 }
