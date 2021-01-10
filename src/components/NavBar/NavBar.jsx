@@ -66,6 +66,15 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+  const cleanNav=(isOpen)=>{
+    if(isOpen===false){
+        return
+    }
+    if(isOpen===true){
+        setIsOpen(false);
+        console.log(isOpen);
+    }
+  }
     return (
         <Fragment>
                <Navi id="nave" className="navbarcomponent responsive1 vintage "  color="light" light expand="md">
@@ -76,25 +85,25 @@ const Navbar = () => {
                         Esteban Indiveri <DotSpan>.</DotSpan>
                     </Link>
                      <NavbarToggler onClick={toggle} />
-                     <Collapse isOpen={isOpen} navbar>
+                     <Collapse isOpen={isOpen} navbar onClick={()=>cleanNav(isOpen)}>
                     <Nav className="ml-auto" navbar>
                         <NavItem className="port-navbar-item blog" >
-                            <Link className={window.location.pathname==="/home"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/home" onClick={toggle}>Home</Link>
+                            <Link className={window.location.pathname==="/home"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/home">Home</Link>
                         </NavItem>
 
                         <NavItem className="port-navbar-item">
-                            <Link className={window.location.pathname==="/portfolio"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/portfolio" onClick={toggle}>portfolio</Link>
+                            <Link className={window.location.pathname==="/portfolio"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/portfolio">portfolio</Link>
                         </NavItem>
                         <NavItem className="port-navbar-item">
-                            <Link className={window.location.pathname==="/about"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/about" onClick={toggle}>About</Link>
-                        </NavItem>
-
-                        <NavItem className="port-navbar-item">
-                            <Link className={window.location.pathname==="/blog"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/blog" onClick={toggle}>Blog</Link>
+                            <Link className={window.location.pathname==="/about"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/about" >About</Link>
                         </NavItem>
 
                         <NavItem className="port-navbar-item">
-                            <Link className={window.location.pathname==="/contact"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/contact" onClick={toggle}>Contact</Link>
+                            <Link className={window.location.pathname==="/blog"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/blog">Blog</Link>
+                        </NavItem>
+
+                        <NavItem className="port-navbar-item">
+                            <Link className={window.location.pathname==="/contact"?"nav-link port-navbar-link activado":"nav-link port-navbar-link noactivado" } to="/contact">Contact</Link>
                         </NavItem>
 
                         {/* <NavItem className="port-navbar-item">

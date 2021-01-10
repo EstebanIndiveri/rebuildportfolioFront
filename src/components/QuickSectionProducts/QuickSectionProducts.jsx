@@ -1,8 +1,13 @@
 import React, { Fragment } from 'react';
 // import styled from '@emotion/styled';
-import uptasker from '../../assets/backroads.png';
+import uptasker from '../../assets/sin2.png';
+// import uptasker from '../../assets/backroads.png';
+
 import regularcoffe from '../../assets/coffe2.png';
-import tripnsleep from '../../assets/tripnsleep.png';
+import tripnsleep from '../../assets/sin3.png';
+// import tripnsleep from '../../assets/tripnsleep.png';
+
+
 import courseblog from '../../assets/courseblog.png';
 
 
@@ -43,7 +48,7 @@ const QuickSectionProducts = () => {
           <div className="productWrapper">
             <div className="image gatsby-image-wrapper">
             {/* <img src="https://i.ibb.co/64fzTV2/Home-Back-Roads-1.gif"  alt="menu"/> */}
-            <img src={uptasker}  alt="menu"/>
+            <img src={uptasker} style={{filter:"brightness(80%"}} alt="menu"/>
 
             </div>
               <div className="text">
@@ -57,7 +62,7 @@ const QuickSectionProducts = () => {
     
           <div className="productWrapper">
            <div className="image gatsby-image-wrapper">
-            <img src={tripnsleep} alt="menu"/>
+            <img src={tripnsleep} alt="menu" style={{filter:"brightness(80%"}}/>
             {/* <img src="https://i.ibb.co/qY3rDzK/Tripnsleep1.gif" alt="menu"/> */}
 
             </div>
@@ -72,7 +77,7 @@ const QuickSectionProducts = () => {
     
           <div className="productWrapper">
             <div className="image gatsby-image-wrapper">
-            <img src={courseblog} alt="menu"/>
+            <img src={courseblog} alt="menu" style={{filter:"brightness(80%"}}/>
               {/* <img src="https://i.ibb.co/PD5NxDL/gifpersonal.gif" alt="menu"/> */}
               </div>
               <div className="text">
@@ -86,7 +91,7 @@ const QuickSectionProducts = () => {
     
           <div className="productWrapper">
             <div className="image gatsby-image-wrapper">
-              <img src={regularcoffe} alt="menu"/>
+              <img src={regularcoffe} alt="menu" style={{filter:"brightness(80%"}}/>
               
               </div>
               <div className="text">

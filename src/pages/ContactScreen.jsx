@@ -109,7 +109,7 @@ const ContactScreen = () => {
     const handleSubmitForm=async e=>{
         e.preventDefault();
         try {
-            setSend(true);
+            setSend(false);
             const resp=await clienteAxios.post('/sendemail',form,{
                 headers:{
                     'Content-type':'application/json'
@@ -117,7 +117,7 @@ const ContactScreen = () => {
             });
             console.log(resp);
             if(resp.status===200){
-            setSend(false);
+                setSend(true);
                 setTimeout(() => {
                     resetForm();
                 }, 1000);

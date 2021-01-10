@@ -122,8 +122,8 @@ const AboutScreen = () => {
         
         </Row>
            
-            <div class="container22 text-center animate__animated animate__fadeIn animate__delay-3s animate__slower">
-            <div class="object">
+            <div className="container22 text-center animate__animated animate__fadeIn animate__delay-3s animate__slower">
+            <div className="object">
                     <img src={perfil} alt="" className="object__img"/>
                     <div className="object__intro">
                     <h1 className="object__intro-title">Full Stack Dev</h1>
@@ -131,8 +131,8 @@ const AboutScreen = () => {
                     </div>
                 </div>
 
-                <div class="arrow">
-                    <div class="arrow__body"></div>
+                <div className="arrow">
+                    <div className="arrow__body"></div>
                 </div>
             </div>
 
