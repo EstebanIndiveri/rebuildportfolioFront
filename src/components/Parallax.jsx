@@ -5,7 +5,9 @@ import PropTypes from "prop-types";
 
 import backgroundImage from "../assets/background.jpg";
 import dev from '../assets/devorange.png';
-import textImage from "../assets/texto.png";
+import textImage from "../assets/opimg/texto.webp";
+// import textImage from "../assets/texto.png";
+
 // import astronautImage from "../assets/astronaut.png";
 // import planet1Image from "../assets/planet1.png";
 // import planet2Image from "../assets/planet2.png";
