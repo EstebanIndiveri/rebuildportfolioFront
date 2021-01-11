@@ -1,7 +1,7 @@
-@font-face {
-  font-family: "bebas";
-  src: url("../../utils/Fonts/bebas/BEBAS.ttf");
-}
+// @font-face {
+//   font-family: "bebas";
+//   src: url("../../utils/Fonts/bebas/BEBAS.ttf");
+// }
 .link {
   left:-180px;
   $self: &;
@@ -77,7 +77,7 @@
 
   &__text {
     color: #4A4A4A;
-    font-family: 'bebas';
+    font-family: 'Bebas';
     font-size: 18px;
     text-transform: uppercase;
   }
