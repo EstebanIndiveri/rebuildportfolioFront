@@ -1,11 +1,11 @@
 import React,{Fragment, useState} from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import saly6 from '../assets/Saly-6.png'
-import saly12 from '../assets/Saly-12.png'
+import saly6 from '../assets/opimg/Saly-6.webp'
+import saly12 from '../assets/opimg/Saly-12.webp'
 import styled from '@emotion/styled';
 import { Collapse } from 'reactstrap';
 // import salyCard from '../assets/Saly-13.png';
-import react from '../assets/react-logo.png'
+import react from '../assets/opimg/react-logo.webp'
 import threejs from '../assets/threejs.png'
 import gatsby from '../assets/Gatsbyjs.png'
 import Helmet from 'react-helmet';
