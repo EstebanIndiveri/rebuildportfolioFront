@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useHistory } from "react-router-dom";
 import '../ProjectsBorrador.scss';
 import clienteAxios from '../../../config/axios';
+import Helmet from 'react-helmet';
 
 
 
@@ -35,6 +36,9 @@ useEffect(()=>{
        
     
     <Fragment>
+       <Helmet>
+                <title>{nombre} | Esteban Indiveri</title>
+            </Helmet>
            {imagen&&(
 
     <Fragment>

@@ -10,6 +10,8 @@ import { AnimatePresence } from 'framer-motion';
 import clienteAxios from '../../config/axios';
 import { Item } from '../../components/Project/test/Items';
 import iphone from '../../assets/3d-phone.png';
+import Helmet from 'react-helmet';
+
 // import Projects from '../../components/Projects/Projects';
 /* background-image:url(${bk});
 // import bk from '../../assets/bk.png'
@@ -138,6 +140,10 @@ const PortfolioScreen = ({match}) => {
             // exit={{ opacity: 0, transition: { duration: 0.15 } }}
             // transition={{ duration: 1,}}>
             <Fragment>
+               <Helmet>
+                <title>Portfolio | Esteban Indiveri</title>
+                <meta name="description" content="Portfolio | Web projects of Esteban Indiveri" data-react-helmet="true"/>
+            </Helmet>
               <div className="fade-in" id="top" style={{top:'100px',height:'20px'}}>
                 <img className="test3d" height="400px" src={iphone} alt=""/></div>
           

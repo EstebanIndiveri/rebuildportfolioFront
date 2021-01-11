@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{Fragment, useState} from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import saly6 from '../assets/Saly-6.png'
 import saly12 from '../assets/Saly-12.png'
@@ -8,6 +8,7 @@ import { Collapse } from 'reactstrap';
 import react from '../assets/react-logo.png'
 import threejs from '../assets/threejs.png'
 import gatsby from '../assets/Gatsbyjs.png'
+import Helmet from 'react-helmet';
 
 
 
@@ -130,6 +131,11 @@ const thirdScrollToggle=()=>{
 }
 
     return ( 
+        <Fragment>
+            <Helmet>
+                <title>Fresh Blog | Esteban Indiveri</title>
+                <meta name="description" content="Blog | Fresh Blog Esteban Indiveri" data-react-helmet="true"/>
+            </Helmet>
         <div className={`${isOpen||secondOpen||thirdOpen?'onfocusback ':'total'}`} >
             <Container className="fade-in" style={{backgroundColor:'#eeeeee',borderRadius:'10px'}} >
             <Row md={12}>
@@ -199,6 +205,7 @@ const thirdScrollToggle=()=>{
             </Row>
             </Container>
             </div>
+            </Fragment>
      );
 }
  

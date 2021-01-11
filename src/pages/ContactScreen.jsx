@@ -9,6 +9,7 @@ import { faEnvelopeOpenText} from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import AnimatedCard from '@rihor/react-3d-card/dist/AnimatedCard';
 import image from '../assets/perfil-black.jpg'
+import Helmet from 'react-helmet';
 
 
 const Title=styled.h1`
@@ -156,6 +157,10 @@ const ContactScreen = () => {
 
     return ( 
         <Fragment>
+            <Helmet>
+                <title>Contact | Esteban Indiveri</title>
+                <meta name="description" content="Let's talk | Esteban Indiveri" data-react-helmet="true"/>
+            </Helmet>
             <ToastContainer
                 position="top-right"
                 autoClose={5000}

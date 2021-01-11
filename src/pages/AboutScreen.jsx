@@ -19,6 +19,7 @@ import icon3dDesign from '../assets/icon3d__design.png';
 import icon3dcommunication from '../assets/icon3d__communitaction.png';
 import icon3dwork from '../assets/icon3dwork.png';
 import icon3dTeam from '../assets/icon3d__team.png';
+import Helmet from 'react-helmet';
 
 import AnimatedCard from '@rihor/react-3d-card/dist/AnimatedCard';
 
@@ -53,6 +54,10 @@ const AboutScreen = () => {
 //       box-shadow: rgb(255, 255, 255) 50px 50px 200px inset;
     return ( 
         <Fragment>
+                 <Helmet>
+                <title>About | Esteban Indiveri</title>
+                <meta name="description" content="Cursos | About me Esteban Indiveri" data-react-helmet="true"/>
+            </Helmet>
         <Container >
             <Row className="fade-in-slowx2 conta aboutScreen mt-2" md={12}  style={{background:'#eeeeee',boxShadow:'inset 5px 5px 100px #FFF',borderRadius:'20px'}}>
                 <Col md={6} sm={12} className="parallaxAbout fade-in" >
