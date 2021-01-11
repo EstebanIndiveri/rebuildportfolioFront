@@ -9,7 +9,9 @@ import {List} from '../../components/Project/test/List';
 import { AnimatePresence } from 'framer-motion';
 import clienteAxios from '../../config/axios';
 import { Item } from '../../components/Project/test/Items';
-import iphone from '../../assets/3d-phone.png';
+import iphone from '../../assets/opimg/3d-phone2.webp';
+// import iphone from '../../assets/3d-phone.png';
+
 import Helmet from 'react-helmet';
 
 // import Projects from '../../components/Projects/Projects';
