@@ -6,9 +6,10 @@ import QuickSectionProducts from '../QuickSectionProducts/QuickSectionProducts';
 import { Example } from '../MotionAnime/MotionAnime';
 // import ParallaxImage from './Parallax';
 // import ParallaxImagesContainer from './Parallax';
-import flutter from '../../assets/90deg/flutter.png';
-import reactlogo from '../../assets/90deg/react.png';
-import angularlogo from '../../assets/90deg/angular.png';
+import flutter from '../../assets/opimg/90deg/flutter2.webp';
+import reactlogo from '../../assets/opimg/90deg/react2.webp';
+import angularlogo from '../../assets/opimg/90deg/angular2.webp';
+
 import angular from '../../assets/opimg/angular.webp';
 import flutterLog from '../../assets/opimg/flutter.webp'
 import reactLog from '../../assets/opimg/react-logo.webp'

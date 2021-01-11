@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react';
 // import styled from '@emotion/styled';
-import uptasker from '../../assets/sin2.png';
+import uptasker from '../../assets/opimg/sin2.webp';
 // import uptasker from '../../assets/backroads.png';
 
-import regularcoffe from '../../assets/coffe2.png';
-import tripnsleep from '../../assets/sin3.png';
+import regularcoffe from '../../assets/opimg/coffe2.webp';
+import tripnsleep from '../../assets/opimg/sin3.webp';
 // import tripnsleep from '../../assets/tripnsleep.png';
 
 
-import courseblog from '../../assets/courseblog.png';
+import courseblog from '../../assets/opimg/courseblog.webp';
 
 
 

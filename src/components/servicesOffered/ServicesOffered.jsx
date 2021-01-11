@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react'
 import { Col, Row } from 'reactstrap';
 import './ServicesOffered.scss';
-import price from '../../assets/competitive.png';
-import testing from '../../assets/testing.png';
-import support from '../../assets/support.png';
-import brand from '../../assets/brand.png';
-import quick from '../../assets/results.png';
-import seo from '../../assets/seo.png';
+import testing from '../../assets/opimg/testing.webp';
+import support from '../../assets/opimg/support.webp';
+import price from '../../assets/opimg/competitive.webp';
+import brand from '../../assets/opimg/brand.webp';
+import quick from '../../assets/opimg/results.webp';
+import seo from '../../assets/opimg/seo.webp';
 
 
 
