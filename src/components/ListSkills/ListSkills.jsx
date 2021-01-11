@@ -1,9 +1,9 @@
 import React, {  Fragment, useState } from 'react'
 import { Flipper, Flipped } from "react-flip-toolkit";
 import './ListSkills.scss';
-import react from '../../assets/react-logo.png'
-import flutter from '../../assets/flutter.png'
-import ux from '../../assets/unnamed.png'
+import react from '../../assets/opimg/react-logo.webp'
+import flutter from '../../assets/opimg/flutter.webp'
+import ux from '../../assets/opimg/unnamed.webp'
 const listData = [...Array(3).keys()];
 const createCardFlipId = index => `listItem-${index}`;
 const colors = ["#fafeff", "#FAFEFF", "#F8FEFF"];

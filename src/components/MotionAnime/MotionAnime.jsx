@@ -2,7 +2,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import './MotionAnime.scss';
 export const Example = ({color,setColor,content,logo}) => {
-  // console.log(logo);
+  console.log(logo);
   return (
     <motion.div
       animate={{
@@ -20,13 +20,13 @@ export const Example = ({color,setColor,content,logo}) => {
         repeatDelay: 1
       }}
     >
-      {logo==='/static/media/react-logo.617f8b03.png'?(
+      {logo==='/static/media/react-logo.1d61c7d3.webp'?(
         <img src={logo} alt="" height="110px" width="150px" className="d-flex text-center justify-content-center mx-auto align-items-center mt-3 fade-in"></img>
       ):
-      logo==="/static/media/flutter.1362e49b.png"?
+      logo==="/static/media/flutter.64a5860f.webp"?
       <img src={logo} alt="" height="110px" width="100px" className="d-flex text-center justify-content-center mx-auto align-items-center mt-3 fade-in "></img>
       :
-      logo==="/static/media/angular.f63b3b63.png"?
+      logo==="/static/media/angular.b9697bce.webp"?
       <img src={logo} alt="" height="120px" width="120px" className="d-flex text-center justify-content-center mx-auto align-items-center mt-3 fade-in "></img>
       :null
     }

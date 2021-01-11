@@ -9,9 +9,9 @@ import { Example } from '../MotionAnime/MotionAnime';
 import flutter from '../../assets/90deg/flutter.png';
 import reactlogo from '../../assets/90deg/react.png';
 import angularlogo from '../../assets/90deg/angular.png';
-import angular from '../../assets/angular.png';
-import flutterLog from '../../assets/flutter.png'
-import reactLog from '../../assets/react-logo.png'
+import angular from '../../assets/opimg/angular.webp';
+import flutterLog from '../../assets/opimg/flutter.webp'
+import reactLog from '../../assets/opimg/react-logo.webp'
 import ServicesOffered from '../servicesOffered/ServicesOffered';
 import ListSkills from '../ListSkills/ListSkills';
 
@@ -62,7 +62,6 @@ const ExpandHome = () => {
                     <img 
                     onMouseEnter={() => {setColor("#B52E31");setLogo(angular)}} 
                     onMouseLeave={() => {setColor("");setLogo(false)}} 
-                    
                     className="rotated" src={angularlogo} alt="" height="120px" ></img>   
                     </div>
                 </div>
