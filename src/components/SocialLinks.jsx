@@ -43,10 +43,10 @@ margin-right:${margin};
 `;
     return ( 
         <Div className={classname}>
-            <A href="https://twitter.com/esteban_tefa" target="_blank"><FontAwesomeIcon icon={faTwitter}/></A>
-            <A href="https://www.instagram.com/estebanindiveri/" target="_blank"><FontAwesomeIcon icon={faInstagram}/></A>
-            <A href="https://www.linkedin.com/in/esteban-indiveri/" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} /></A>
-            <A href="https://wa.me/543512694707?text=Buenos%20días%20Esteban%20Indiveri%20,%20me%20contacto%20para%20hablar%20sobre%20una%20propuesta%20laboral." target="_blank"><FontAwesomeIcon icon={faWhatsapp} /></A>
+            <A href="https://twitter.com/esteban_tefa" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faTwitter}/></A>
+            <A href="https://www.instagram.com/estebanindiveri/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram}/></A>
+            <A href="https://www.linkedin.com/in/esteban-indiveri/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} /></A>
+            <A href="https://wa.me/543512694707?text=Buenos%20días%20Esteban%20Indiveri%20,%20me%20contacto%20para%20hablar%20sobre%20una%20propuesta%20laboral." target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faWhatsapp} /></A>
         </Div>
      );
 }
