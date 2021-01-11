@@ -25,16 +25,24 @@ const DescriptionHome = () => {
             backDelay={3000}
             loopCount={0}
             showCursor
-            className="self-typed animate__animated animate__fadeIn animate__delay-1s"
+            // className="self-typed animate__animated animate__fadeIn animate__delay-1s"
+            className="self-typed"
+
             cursorChar="|"
           />
           </div>
-            <P className="mt-4 animate__animated animate__fadeIn animate__delay-2s" >
+            {/* <P className="mt-4 animate__animated animate__fadeIn animate__delay-2s" > */}
+            <P className="mt-4 " >
+
               Hello and welcome to the portfolio website of Esteban Daniel Indiveri.
                 Get informed, collaborate and discover projects i was working on this year</P>
-            <p className="text-center mt-3 animate__animated animate__fadeIn animate__delay-2s">Come'on, let's take a look on my work.</p>
+            {/* <p className="text-center mt-3 animate__animated animate__fadeIn animate__delay-2s">Come'on, let's take a look on my work.</p> */}
+            <p className="text-center mt-3 ">Come'on, let's take a look on my work.</p>
+
             <div>
-              <SocialLinks size={24} classname="animate__animated animate__fadeIn animate__delay-3s"/>
+              {/* <SocialLinks size={24} classname="animate__animated animate__fadeIn animate__delay-3s"/> */}
+              <SocialLinks size={24} />
+
             </div>
         </div>
      );

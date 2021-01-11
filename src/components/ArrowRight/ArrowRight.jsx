@@ -7,7 +7,9 @@ const ArrowRight = () => {
     const history = useHistory();
     return ( 
         <Fragment>
-            <div className="link animate__animated animate__fadeIn animate__delay-3s" style={{ position:"relative",top:"0px",cursor:'pointer'}}  alt="" onClick={()=>history.push('/portfolio')}>
+            {/* <div className="link animate__animated animate__fadeIn animate__delay-3s" style={{ position:"relative",top:"0px",cursor:'pointer'}}  alt="" onClick={()=>history.push('/portfolio')}> */}
+            <div className="link " style={{ position:"relative",top:"0px",cursor:'pointer'}}  alt="" onClick={()=>history.push('/portfolio')}>
+
                 <span className="link__arrow">
                     <span></span>
                     <span></span>
