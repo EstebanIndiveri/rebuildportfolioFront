@@ -8,7 +8,9 @@ import pdf from '../assets/Cv_Indiveri_Esteban.pdf';
 import 'react-pdf/dist/umd/Page/AnnotationLayer.css';
 import { pdfjs } from 'react-pdf';
 import perfil from '../assets/perfil-black.jpg';
-import hand from '../assets/businesscoffe.png';
+import hand from '../assets/opimg/businesscoffe.webp';
+// import hand from '../assets/businesscoffe.png';
+
 import icon3dcode1 from '../assets/icon3dcode1.png';
 import icon3dcode2 from '../assets/icon3dcode2.png';
 import icon3dnotes from '../assets/icon3dnotes.png';
@@ -20,21 +22,11 @@ import icon3dcommunication from '../assets/icon3d__communitaction.png';
 import icon3dwork from '../assets/icon3dwork.png';
 import icon3dTeam from '../assets/icon3d__team.png';
 import Helmet from 'react-helmet';
-
 import AnimatedCard from '@rihor/react-3d-card/dist/AnimatedCard';
-
-
-
-
-
-
-
-
-
 
 // import phone from '../assets/Phone.png'
 // import phone from '../assets/Saly-8.png'
-import phone from '../assets/handshake.png'
+import phone from '../assets/opimg/handshake.webp'
 import { Controller, Scene } from "react-scrollmagic";
 // eslint-disable-next-line
 import { Controls, PlayState, Reveal, Tween } from 'react-gsap';

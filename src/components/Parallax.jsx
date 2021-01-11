@@ -4,7 +4,9 @@ import Parallax from "parallax-js";
 import PropTypes from "prop-types";
 
 import backgroundImage from "../assets/background.jpg";
-import dev from '../assets/devorange.png';
+// import dev from '../assets/devorange.png';
+import dev from '../assets/opimg/devorange.webp';
+
 import textImage from "../assets/opimg/texto.webp";
 // import textImage from "../assets/texto.png";
 

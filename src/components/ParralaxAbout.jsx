@@ -4,8 +4,12 @@ import Parallax from "parallax-js";
 import PropTypes from "prop-types";
 
 import backgroundImage from "../assets/background.jpg";
-import textImage from '../assets/business-3d.png';
-import dev from "../assets/handphone.png";
+import textImage from '../assets/opimg/business-3d.webp';
+// import textImage from '../assets/business-3d.png';
+
+import dev from "../assets/opimg/handphone.webp";
+// import dev from "../assets/handphone.png";
+
 // import astronautImage from "../assets/astronaut.png";
 // import planet1Image from "../assets/planet1.png";
 // import planet2Image from "../assets/planet2.png";
