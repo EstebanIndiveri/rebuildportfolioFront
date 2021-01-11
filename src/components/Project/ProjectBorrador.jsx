@@ -45,7 +45,9 @@ const ProjectBorrador = ({proyecto}) => {
                         {imagen
                         ?
                         (
-                        <img src={`http://localhost:5000/${imagen}`} alt=""/>
+                        <img src={`${process.env.REACT_APP_ENVPOST}/${imagen}`} alt=""/>
+                        // <img src={`http://localhost:5000/${imagen}`} alt=""/>
+
                         )
                         :
                         null

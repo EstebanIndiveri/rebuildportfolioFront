@@ -30,7 +30,9 @@ function Card({ card }) {
             className="card-image-container"
             layoutId={`card-image-container-${_id}`}
           >
-            <img className="card-image" src={`http://localhost:5000/${imagen}`} alt="" />
+            <img className="card-image" src={`${process.env.REACT_APP_ENVPOST}/${imagen}`} alt="" />
+            {/* <img className="card-image" src={`http://localhost:5000/${imagen}`} alt="" /> */}
+
           </motion.div>
           <motion.div
             className="title-container"

@@ -67,7 +67,9 @@ useEffect(()=>{
             onClick={()=>history.goBack()
             }
           >
-            <img className="card-image" src={`http://localhost:5000/${imagen}`} alt="" />
+            {/* <img className="card-image" src={`http://localhost:5000/${imagen}`} alt="" /> */}
+            <img className="card-image" src={`${process.env.REACT_APP_ENVPOST}/${imagen}`} alt="" />
+
 
 
           </motion.div>

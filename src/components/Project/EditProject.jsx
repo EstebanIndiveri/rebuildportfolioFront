@@ -115,7 +115,10 @@ const EditProject = (props) => {
            
             <div className="campo">
                 {imagen?(
-                    <img src={`http://localhost:5000/${imagen}`} alt="" height="300px"></img>
+                    <img src={`${process.env.REACT_APP_ENVPOST}/${imagen}`} alt="" height="300px"></img>
+                    // <img src={`http://localhost:5000/${imagen}`} alt="" height="300px"></img>
+
+                    
                 )
                 :null
                 }
