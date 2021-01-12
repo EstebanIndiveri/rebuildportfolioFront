@@ -95,10 +95,10 @@ const AboutScreen = () => {
             </Col>
             <Col sm={12} lg={6} >
             <AnimatedCard weight={0.3} clickable={true}>
-                <h2 className="text-center">Soft Skills</h2>
+                <h2 className="text-center">Hard Skills</h2>
                 <ul>
                     <li>
-                        <img src={icon3dcode1} alt="" width="120px" style={{opacity:"0.66"}}/><img src={icon3dcode2} alt="" width="120px" style={{opacity:"0.66",marginLeft:'-5rem',marginRight:'-2rem'}}/> 
+                        <img src={icon3dcode1} alt="" width="120px" style={{opacity:"0.66",marginLeft:'.3rem'}}/><img src={icon3dcode2} alt="" width="120px" style={{opacity:"0.66",marginLeft:'-5rem',marginRight:'-2rem'}}/> 
                         Software Languages and last frameworks
                     </li>
                     <li>
