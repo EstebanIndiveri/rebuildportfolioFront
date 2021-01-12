@@ -11,6 +11,7 @@ import ButttonRetro from '../../utils/Fonts/buttons/ButtonRetro';
 import elipse from '../../assets/redondat.png'
 import ExpandHome from '../../components/ExpandHome/ExpandHome';
 import Footer from '../../components/Footer/Footer';
+import homeScreenImage from '../../assets/opimg/homepageindiveri.webp'
 import Helmet from 'react-helmet';
 
 // import ListSkills from '../../components/ListSkills/ListSkills';
@@ -95,6 +96,10 @@ const HomeScreen = () => {
              <Helmet>
                 <title>Esteban Indiveri</title>
                 <meta name="description" content="Home | Portfolio Indiveri" data-react-helmet="true"/>
+                <meta property="og:title" content="Esteban Indiveri"/>
+                <meta property="og:image" content={homeScreenImage} />
+                <meta property="og:description" content="Home | Portfolio Indiveri" />
+                <meta property="og:url" content="https://indiveriportfolio.netlify.app"/>
             </Helmet>
             {/* <Containerwave className="fade-in-slowx2"> */}
             <Containerwave >
