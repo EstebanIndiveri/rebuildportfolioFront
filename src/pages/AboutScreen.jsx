@@ -98,7 +98,7 @@ const AboutScreen = () => {
                 <h2 className="text-center">Hard Skills</h2>
                 <ul>
                     <li>
-                        <img src={icon3dcode1} alt="" width="120px" style={{opacity:"0.66",marginLeft:'.3rem'}}/><img src={icon3dcode2} alt="" width="120px" style={{opacity:"0.66",marginLeft:'-5rem',marginRight:'-2rem'}}/> 
+                        <img src={icon3dcode1} alt="" width="120px" style={{opacity:"0.66",marginLeft:'-1rem'}}/><img src={icon3dcode2} alt="" width="120px" style={{opacity:"0.66",marginLeft:'-5rem',marginRight:'-2rem'}}/> 
                         Software Languages and last frameworks
                     </li>
                     <li>
