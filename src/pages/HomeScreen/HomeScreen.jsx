@@ -11,7 +11,6 @@ import ButttonRetro from '../../utils/Fonts/buttons/ButtonRetro';
 import elipse from '../../assets/redondat.png'
 import ExpandHome from '../../components/ExpandHome/ExpandHome';
 import Footer from '../../components/Footer/Footer';
-import homeScreenImage from '../../assets/opimg/homepageindiveri.webp'
 import Helmet from 'react-helmet';
 
 // import ListSkills from '../../components/ListSkills/ListSkills';
