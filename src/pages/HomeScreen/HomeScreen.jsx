@@ -96,10 +96,7 @@ const HomeScreen = () => {
              <Helmet>
                 <title>Esteban Indiveri</title>
                 <meta name="description" content="Home | Portfolio Indiveri" data-react-helmet="true"/>
-                <meta property="og:title" content="Esteban Indiveri"/>
-                <meta property="og:image" content={homeScreenImage} />
-                <meta property="og:description" content="Home | Portfolio Indiveri" />
-                <meta property="og:url" content="https://indiveriportfolio.netlify.app"/>
+                
             </Helmet>
             {/* <Containerwave className="fade-in-slowx2"> */}
             <Containerwave >
