@@ -2,7 +2,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import './MotionAnime.scss';
 export const Example = ({color,setColor,content,logo}) => {
-  console.log(logo);
+  // console.log(logo);
   return (
     <motion.div
       animate={{

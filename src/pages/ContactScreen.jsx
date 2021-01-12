@@ -101,7 +101,7 @@ const ContactScreen = () => {
         });
         if(form.email===''||form.name===''||form.message===''){
             setSend(false);
-            console.log(send);
+            // console.log(send);
         }
         setSend(true);
 
@@ -116,7 +116,7 @@ const ContactScreen = () => {
                     'Content-type':'application/json'
                 }
             });
-            console.log(resp);
+            // console.log(resp);
             if(resp.status===200){
                 setSend(true);
                 setTimeout(() => {

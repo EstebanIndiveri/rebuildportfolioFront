@@ -72,7 +72,7 @@ const Navbar = () => {
     }
     if(isOpen===true){
         setIsOpen(false);
-        console.log(isOpen);
+        // console.log(isOpen);
     }
   }
     return (

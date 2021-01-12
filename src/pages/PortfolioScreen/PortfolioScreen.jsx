@@ -91,7 +91,7 @@ const PortfolioScreen = ({match}) => {
           }
           prevScrollY.current = currentScrollY;
           // console.log(goingUp, currentScrollY,prevScrollY);
-          console.log(goingUp, currentScrollY);
+          // console.log(goingUp, currentScrollY);
 
         };
         const consultarApi=async()=>{
