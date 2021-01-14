@@ -36,6 +36,7 @@
     "react-datetime-picker": "^3.0.4",
     "react-dom": "^17.0.1",
     "react-flip-toolkit": "^7.0.13",
+    "react-ga": "^3.3.0",
     "react-gsap": "^2.2.1",
     "react-helmet": "^6.1.0",
     "react-lorem-ipsum": "^1.4.9",
