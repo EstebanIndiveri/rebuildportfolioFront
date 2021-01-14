@@ -1,4 +1,4 @@
-import React, { Fragment,useEffect } from 'react';
+import React, { Fragment } from 'react';
 import { Redirect, Route, Switch} from 'react-router-dom';
 import Navbar from '../components/NavBar/NavBar';
 import AboutScreen from '../pages/AboutScreen';
@@ -8,14 +8,10 @@ import HomeScreen from '../pages/HomeScreen/HomeScreen';
 import PortfolioScreen from '../pages/PortfolioScreen/PortfolioScreen';
 import EditProject from '../components/Project/EditProject';
 import NewProject from '../components/Project/NewProject';
-import ReactGA from 'react-ga';
+
 
 const DashboardRoutes = () => {
-    useEffect(() => {
-        ReactGA.initialize('G-H8SCC00RFJ');
-      }, []);
 
-      ReactGA.pageview(window.location.hash + window.location.search);
     return (
         <Fragment>
             <Navbar/>
