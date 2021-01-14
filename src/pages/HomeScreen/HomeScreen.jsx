@@ -92,9 +92,9 @@ const HomeScreen = () => {
 
     useEffect(() => {
         ReactGA.initialize('G-8MJG4HB7FW');
-        ReactGA.pageview('/homepage');
       }, []);
 
+      ReactGA.pageview(window.location.hash + window.location.search);
 
     return ( 
         <Fragment>
