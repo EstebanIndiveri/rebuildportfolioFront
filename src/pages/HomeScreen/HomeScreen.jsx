@@ -1,4 +1,4 @@
-import React, { Fragment,useEffect } from 'react'
+import React, { Fragment } from 'react'
 import { Col, Container, Row } from 'reactstrap';
 import ArrowRight from '../../components/ArrowRight/ArrowRight';
 import DescriptionHome from '../../components/DescriptionHome'
@@ -12,7 +12,6 @@ import elipse from '../../assets/redondat.png'
 import ExpandHome from '../../components/ExpandHome/ExpandHome';
 import Footer from '../../components/Footer/Footer';
 import Helmet from 'react-helmet';
-import ReactGA from 'react-ga';
 
 // import ListSkills from '../../components/ListSkills/ListSkills';
 const Containerwave=styled.div`
@@ -90,11 +89,7 @@ const scroll = (component) => {
 
 const HomeScreen = () => {
 
-    useEffect(() => {
-        ReactGA.initialize('G-8MJG4HB7FW');
-      }, []);
-
-      ReactGA.pageview(window.location.hash + window.location.search);
+   
 
     return ( 
         <Fragment>
