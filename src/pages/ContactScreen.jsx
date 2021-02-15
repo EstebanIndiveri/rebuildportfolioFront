@@ -239,7 +239,7 @@ const ContactScreen = () => {
                     <a href="mailto:esteban.indiveri@gmail.com" target="_blank" rel="noreferrer"><li><FontAwesomeIcon className="socialLink" icon={faEnvelopeOpenText} size="lg" color="#8BC9DC" width="30" /> &nbsp; Email: esteban.indiveri@gmail.com</li></a>
                     <a href="https://github.com/EstebanIndiveri" target="_blank" rel="noreferrer"><li><FontAwesomeIcon className="socialLink" icon={faGithub} size="lg" color="#8BC9DC" width="30" /> &nbsp; Github: Esteban Indiveri</li></a>
                     <a href="https://wa.me/543512694707?text=Buenos%20días%20Esteban%20Indiveri%20,%20me%20contacto%20para%20hablar%20sobre%20una%20propuesta%20laboral." target="_blank" rel="noreferrer"><li><FontAwesomeIcon className="socialLink" icon={faWhatsapp} size="lg" color="#8BC9DC" width="30" /> &nbsp; Phone: +543512694707</li></a>
-                    <a href="https://www.linkedin.com/in/esteban-indiveri/" target="_blank" rel="noreferrer"><li><FontAwesomeIcon className="socialLink" icon={faLinkedin} size="lg" color="#8BC9DC" width="30" /> &nbsp; Linkedin: esteluca89@hotmail.com</li></a>
+                    <a href="https://www.linkedin.com/in/esteban-indiveri/" target="_blank" rel="noreferrer"><li><FontAwesomeIcon className="socialLink" icon={faLinkedin} size="lg" color="#8BC9DC" width="30" /> &nbsp; Linkedin: Esteban Indiveri</li></a>
                 </ul>
             </DivList>
 
